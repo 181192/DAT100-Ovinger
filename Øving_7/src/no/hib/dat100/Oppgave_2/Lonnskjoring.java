@@ -19,6 +19,7 @@ public class Lonnskjoring {
 		this.firmanamn = firmanamn;
 	} // konstruktør
 
+	/* Set- og get metoder */
 	public String getFirmanamn() {
 		return firmanamn;
 	} // get
@@ -40,6 +41,7 @@ public class Lonnskjoring {
 		antalTilsette++;
 	} // metode
 
+	/* Finner total overtid over de ansatte */
 	public void finnTotalOvertid() {
 		double sum = 0;
 		for (int j = 0; j < antalTilsette; j++) {
@@ -49,6 +51,7 @@ public class Lonnskjoring {
 		System.out.printf("%s%.2f%s%n", "Total Overtid\t\t : ", sum, " timer");
 	} // metode
 
+	/* Finner total bruttolønn for de ansatte */
 	public void finnTotalBruttoløn() {
 		double sum = 0;
 		for (int j = 0; j < antalTilsette; j++) {
@@ -59,12 +62,14 @@ public class Lonnskjoring {
 
 	} // metode
 
+	/* Skriver ut lønnsoversikt til de ansatte */
 	public void skrivLonsoversikt() {
 		for (int i = 0; i < antalTilsette; i++) {
 			at[i].skrivUt();
 		} // for
 	} // metode
 
+	/* Skriver ut den høyeste bruttolønnen til en av de ansatte */
 	public void skrivHogasteBrutto() {
 		double storste = 0;
 		storste = at[0].finnBruttolon();
@@ -76,22 +81,28 @@ public class Lonnskjoring {
 		System.out.printf("%s%.2f%s%n", "Høyeste Bruttolønn\t : ", storste, " kr");
 	} // metode
 
+	/* Søk opp en ansatt i firmaet, og skriv ut informasjon om personen */
 	public boolean finnOgSkrivPerson() {
 		Scanner tast = new Scanner(System.in);
 		System.out.print("Søk på person: ");
 
 		String namn = "";
 		namn = tast.nextLine();
-//		namn = "Ole Olsen";		
-		
+		// namn = "Ole Olsen";
+
+		/* Splitter innlest navn, splitter ved tom-spacing */
 		String[] fulltnamn = namn.split(" ");
 		String fornamn = fulltnamn[0];
 		String etternamn = fulltnamn[1];
-		
-		tast.close();		
+
+		tast.close();
 
 		for (int i = 0; i < antalTilsette; i++) {
-			if (!etternamn.equalsIgnoreCase(at[i].getNamn()) && fornamn.equalsIgnoreCase(at[i].getNamn()) ) {
+			if (!etternamn.equalsIgnoreCase(at[i].getNamn()) && fornamn.equalsIgnoreCase(at[i].getNamn())) {
+				/*
+				 * Visst enten fornavn eller etternavn er funnet, skal metoden
+				 * skrive ut all informasjon
+				 */
 				System.out.println();
 				Arbeidstaker.tabellOverskrift();
 				at[i].finnOvertidsTimar();
@@ -100,9 +111,9 @@ public class Lonnskjoring {
 				at[i].finnNettolon();
 				at[i].skrivUt();
 				return true;
-			
+
 			} // if
-			else if(etternamn.equalsIgnoreCase(at[i].getNamn()) && !fornamn.equalsIgnoreCase(at[i].getNamn()) ) {
+			else if (etternamn.equalsIgnoreCase(at[i].getNamn()) && !fornamn.equalsIgnoreCase(at[i].getNamn())) {
 				System.out.println();
 				Arbeidstaker.tabellOverskrift();
 				at[i].finnOvertidsTimar();
@@ -113,10 +124,13 @@ public class Lonnskjoring {
 				return true;
 			} // if
 		} // for
+		/* Navnet fantes ikke i firmaet */
 		System.out.println("Fant ikke navnet du søkte på!");
-		return false;		
+		return false;
 	} // metode
+
+	/* Skriv ut firmanavn */
 	public void skrivFirmanavn() {
-		System.out.println("Firmanavn: " + getFirmanamn() +"\n");
+		System.out.println("Firmanavn: " + getFirmanamn() + "\n");
 	}
 }
