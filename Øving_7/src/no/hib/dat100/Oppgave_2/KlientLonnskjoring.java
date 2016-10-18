@@ -9,7 +9,7 @@ public class KlientLonnskjoring {
 		Lonnskjoring lk = new Lonnskjoring("Kiwi", 10);
 
 		/* Oppretter ansatte */
-		Arbeidstaker a1 = new Arbeidstaker("Ole", "Olsen", 180, 60, 19);
+		Arbeidstaker a1 = new Arbeidstaker("Ole", "Ola", 180, 60, 19);
 		Arbeidstaker a2 = new Arbeidstaker("Per", "Olsen", 255, 30, 27);
 		Arbeidstaker a3 = new Arbeidstaker("Anna", "Andresen", 160, 44, 17);
 		Arbeidstaker a4 = new Arbeidstaker("Ida", "Gundersen", 127, 37.5, 22);
@@ -35,6 +35,7 @@ public class KlientLonnskjoring {
 		Arbeidstaker.linje('-');
 
 		/* Søk opp en ansatt i firmaet, og skriv ut informasjon om personen */
-		lk.finnOgSkrivPersonAvansert();
+		Meny.meny();
+		// lk.finnOgSkrivPersonAvansert();
 	}
 }

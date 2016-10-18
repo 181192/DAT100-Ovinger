@@ -113,7 +113,7 @@ public class Lonnskjoring {
 			etternamn = namn;
 		}
 
-		tast.close();
+//		tast.close();
 		/*
 		 * Visst enten fornavn eller etternavn er funnet, skal metoden skrive ut
 		 * all informasjon
@@ -137,6 +137,7 @@ public class Lonnskjoring {
 			} // if
 		} // for
 		/* Navnet fantes ikke i firmaet */
+		System.out.println(etternamn + fornamn + namn);
 		System.out.println("Fant ikke navnet du søkte på!");
 		return false;
 	} // metode
@@ -150,7 +151,7 @@ public class Lonnskjoring {
 		namn = tast.nextLine();
 		// namn = "Ole Olsen";
 
-		tast.close();
+//		tast.close();
 
 		for (int i = 0; i < antalTilsette; i++) {
 			if (namn.equalsIgnoreCase(at[i].getNamn())) {
