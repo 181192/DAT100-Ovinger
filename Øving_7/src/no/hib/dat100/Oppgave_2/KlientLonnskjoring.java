@@ -35,6 +35,6 @@ public class KlientLonnskjoring {
 		Arbeidstaker.linje('-');
 
 		/* Søk opp en ansatt i firmaet, og skriv ut informasjon om personen */
-		lk.finnOgSkrivPerson();
+		lk.finnOgSkrivPersonAvansert();
 	}
 }
