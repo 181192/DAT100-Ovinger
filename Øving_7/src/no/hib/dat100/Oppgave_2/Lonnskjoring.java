@@ -89,16 +89,25 @@ public class Lonnskjoring {
 		String namn = "";
 		namn = tast.nextLine();
 		// namn = "Ole Olsen";
-
+		
+		String fornamn = " ";
+		String etternamn = " ";
 		/* Splitter innlest navn, splitter ved tom-spacing */
-		String[] fulltnamn = namn.split(" ");
-		String fornamn = fulltnamn[0];
-		String etternamn = fulltnamn[1];
+		if (namn.contains(" ")) {
+			String[] fulltnamn = namn.split(" ");
+			fornamn = fulltnamn[0];
+			etternamn = fulltnamn[1];
+		} else {
+			fornamn = namn;
+			etternamn = namn;
+		}
+		
 
 		tast.close();
 
 		for (int i = 0; i < antalTilsette; i++) {
-			if (!etternamn.equalsIgnoreCase(at[i].getNamn()) && fornamn.equalsIgnoreCase(at[i].getNamn())) {
+			if (!etternamn.equalsIgnoreCase(at[i].getNamn())) {
+				if(fornamn.equalsIgnoreCase(at[i].getNamn())) {
 				/*
 				 * Visst enten fornavn eller etternavn er funnet, skal metoden
 				 * skrive ut all informasjon
@@ -111,9 +120,10 @@ public class Lonnskjoring {
 				at[i].finnNettolon();
 				at[i].skrivUt();
 				return true;
-
+				}
 			} // if
-			else if (etternamn.equalsIgnoreCase(at[i].getNamn()) && !fornamn.equalsIgnoreCase(at[i].getNamn())) {
+			else if (etternamn.equalsIgnoreCase(at[i].getNamn())) {
+				if (!fornamn.equalsIgnoreCase(at[i].getNamn())) {
 				System.out.println();
 				Arbeidstaker.tabellOverskrift();
 				at[i].finnOvertidsTimar();
@@ -122,6 +132,7 @@ public class Lonnskjoring {
 				at[i].finnNettolon();
 				at[i].skrivUt();
 				return true;
+				}
 			} // if
 		} // for
 		/* Navnet fantes ikke i firmaet */
