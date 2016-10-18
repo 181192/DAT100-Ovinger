@@ -81,6 +81,11 @@ public class Lonnskjoring {
 		System.out.printf("%s%.2f%s%n", "Høyeste Bruttolønn\t : ", storste, " kr");
 	} // metode
 
+	/* Skriv ut firmanavn */
+	public void skrivFirmanavn() {
+		System.out.println("Firmanavn: " + getFirmanamn() + "\n");
+	}
+
 	public void personInnhold(int i) {
 		System.out.println();
 		Arbeidstaker.tabellOverskrift();
@@ -102,7 +107,7 @@ public class Lonnskjoring {
 
 		String fornamn = " ";
 		String etternamn = " ";
-		
+
 		/* Splitter innlest navn, splitter ved tom-spacing */
 		if (namn.contains(" ")) {
 			String[] fulltnamn = namn.split(" ");
@@ -113,7 +118,7 @@ public class Lonnskjoring {
 			etternamn = namn;
 		}
 
-//		tast.close();
+//		 tast.close();
 		/*
 		 * Visst enten fornavn eller etternavn er funnet, skal metoden skrive ut
 		 * all informasjon
@@ -143,35 +148,44 @@ public class Lonnskjoring {
 	} // metode
 
 	public boolean finnOgSkrivPerson() {
-
 		Scanner tast = new Scanner(System.in);
 		System.out.print("Søk på person: ");
 
 		String namn = "";
-		namn = tast.nextLine();
-		// namn = "Ole Olsen";
-
-//		tast.close();
-
-		for (int i = 0; i < antalTilsette; i++) {
-			if (namn.equalsIgnoreCase(at[i].getNamn())) {
-				System.out.println();
-				Arbeidstaker.tabellOverskrift();
-				at[i].finnOvertidsTimar();
-				at[i].finnBruttolon();
-				at[i].finnSkatt();
-				at[i].finnNettolon();
-				at[i].skrivUt();
+		 namn = tast.nextLine();
+//		namn = "Ole hoho";
+		 tast.close();
+		if (startNamn(namn) == false) {
+			if (sluttNamn(namn) == true) {
+				sluttNamn(namn);
 				return true;
-			} // if
-		} // for
-		/* Navnet fantes ikke i firmaet */
-		System.out.println("Fant ikke navnet du søkte på!");
+			} else if (startNamn(namn) == true) {
+				startNamn(namn);
+				return true;
+			}
+		}
 		return false;
-	} // metode
+	}
 
-	/* Skriv ut firmanavn */
-	public void skrivFirmanavn() {
-		System.out.println("Firmanavn: " + getFirmanamn() + "\n");
+	public boolean startNamn(String namn) {
+		for (int i = 0; i < antalTilsette; i++) {
+			if (namn.startsWith(at[i].getNamn())) {
+				personInnhold(i);
+				return true;
+			}
+		}
+		System.out.println("Fant ikke personen du søkte på!");
+		return false;
+	}
+
+	public boolean sluttNamn(String namn) {
+		for (int i = 0; i < antalTilsette; i++) {
+			if (namn.endsWith(at[i].getEtternamn())) {
+				personInnhold(i);
+				return true;
+			}
+		}
+		System.out.println("Fant ikke personen du søkte på!");
+		return false;
 	}
 }

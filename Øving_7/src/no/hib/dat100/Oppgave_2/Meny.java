@@ -13,7 +13,6 @@ public class Meny {
 		do {
 			System.out.print(meny);
 			valg = tast.nextInt();
-//			tast.close();
 			switch (valg) {
 			case 1:
 				System.out.println();
@@ -21,16 +20,12 @@ public class Meny {
 				System.out.println();
 				break;
 			case 2:
-				System.out.println();				
-				lk.finnOgSkrivPersonAvansert();
-				System.out.println();
-			case 3:
 				break;
 			default:
 				System.out.println("\nUkjent menyvalg\n");
 			}
 		} while (valg != 3); // do-while
-		
+//		tast.close();
 
 	}
 }
