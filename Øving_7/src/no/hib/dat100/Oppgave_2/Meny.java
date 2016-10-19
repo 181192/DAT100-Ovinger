@@ -4,8 +4,10 @@ import java.util.Scanner;
 
 public class Meny {
 	public static void meny() {
+		/* Opprette en tabell for ansatte, med firmanamn og antall plasser */
 		Lonnskjoring lk = new Lonnskjoring("kiwi", 10);
 		
+		/* Oppretter ansatte */
 		Arbeidstaker a1 = new Arbeidstaker("Ole", "Mannen", 180, 60, 19);
 		Arbeidstaker a2 = new Arbeidstaker("Per", "Olsen", 255, 30, 27);
 		Arbeidstaker a3 = new Arbeidstaker("Anna", "Andresen", 160, 44, 17);
