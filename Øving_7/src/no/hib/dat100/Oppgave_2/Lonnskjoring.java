@@ -84,8 +84,9 @@ public class Lonnskjoring {
 	/* Skriv ut firmanavn */
 	public void skrivFirmanavn() {
 		System.out.println("Firmanavn: " + getFirmanamn() + "\n");
-	}
-
+	} // metode
+	
+	/* Informasjon til de ansatte i plass "i" i lønnskjøring tabell */
 	public void personInnhold(int i) {
 		System.out.println();
 		Arbeidstaker.tabellOverskrift();
@@ -94,98 +95,57 @@ public class Lonnskjoring {
 		at[i].finnSkatt();
 		at[i].finnNettolon();
 		at[i].skrivUt();
-	}
+	} // metode
 
 	/* Søk opp en ansatt i firmaet, og skriv ut informasjon om personen */
-	public boolean finnOgSkrivPersonAvansert() {
+	public boolean finnOgSkrivPerson() {
 		Scanner tast = new Scanner(System.in);
-		System.out.print("Søk på person: ");
+		System.out.print("Søk på ansatt: ");
 
+		/* Skriver inn navn på ansatt */
 		String namn = "";
 		namn = tast.nextLine();
-		// namn = "Ole Olsen";
+		namn = namn.toLowerCase();
+//		tast.close();
 
-		String fornamn = " ";
-		String etternamn = " ";
-
-		/* Splitter innlest navn, splitter ved tom-spacing */
-		if (namn.contains(" ")) {
-			String[] fulltnamn = namn.split(" ");
-			fornamn = fulltnamn[0];
-			etternamn = fulltnamn[1];
-		} else {
-			fornamn = namn;
-			etternamn = namn;
+		if (sluttNamn(namn) == true) {
+			return true;
+		} else if (startNamn(namn) == true) {
+			return true;
 		}
+		System.out.println("Fant ikke den ansatte du søkte på!");
+		return false;
+	} // metode
 
-//		 tast.close();
-		/*
-		 * Visst enten fornavn eller etternavn er funnet, skal metoden skrive ut
-		 * all informasjon
-		 */
+	/*
+	 * Metoden skjekker om navnet du skrev inn starter på fornamnet til de
+	 * ansatte
+	 */
+	public boolean startNamn(String namn) {
 		for (int i = 0; i < antalTilsette; i++) {
-			if (!etternamn.equalsIgnoreCase(at[i].getEtternamn())) {
-				if (fornamn.equalsIgnoreCase(at[i].getNamn())) {
-					personInnhold(i);
-					return true;
-				}
-			} // if
-			else if (etternamn.equalsIgnoreCase(at[i].getEtternamn())) {
-				if (!fornamn.equalsIgnoreCase(at[i].getNamn())) {
-					personInnhold(i);
-					return true;
-				}
-			} // if
-			else if (etternamn.equalsIgnoreCase(at[i].getEtternamn()) && fornamn.equalsIgnoreCase(at[i].getNamn())) {
+			String lowerCaseNamn = at[i].getNamn();
+			lowerCaseNamn = lowerCaseNamn.toLowerCase();
+			if (namn.toLowerCase().startsWith(lowerCaseNamn)) {
 				personInnhold(i);
 				return true;
 			} // if
 		} // for
-		/* Navnet fantes ikke i firmaet */
-		System.out.println(etternamn + fornamn + namn);
-		System.out.println("Fant ikke navnet du søkte på!");
 		return false;
 	} // metode
 
-	public boolean finnOgSkrivPerson() {
-		Scanner tast = new Scanner(System.in);
-		System.out.print("Søk på person: ");
-
-		String namn = "";
-		 namn = tast.nextLine();
-//		namn = "Ole hoho";
-		 tast.close();
-		if (startNamn(namn) == false) {
-			if (sluttNamn(namn) == true) {
-				sluttNamn(namn);
-				return true;
-			} else if (startNamn(namn) == true) {
-				startNamn(namn);
-				return true;
-			}
-		}
-		return false;
-	}
-
-	public boolean startNamn(String namn) {
-		for (int i = 0; i < antalTilsette; i++) {
-			if (namn.startsWith(at[i].getNamn())) {
-				personInnhold(i);
-				return true;
-			}
-		}
-		System.out.println("Fant ikke personen du søkte på!");
-		return false;
-	}
-
+	/*
+	 * Metoden skjekker om navnet du skrev inn slutter på etternamnet til de
+	 * ansatte
+	 */
 	public boolean sluttNamn(String namn) {
 		for (int i = 0; i < antalTilsette; i++) {
-			if (namn.endsWith(at[i].getEtternamn())) {
+			String lowerCaseEtternamn = at[i].getEtternamn();
+			lowerCaseEtternamn = lowerCaseEtternamn.toLowerCase();
+			if (namn.toLowerCase().endsWith(lowerCaseEtternamn)) {
 				personInnhold(i);
 				return true;
-			}
-		}
-		System.out.println("Fant ikke personen du søkte på!");
+			} // if
+		} // for
 		return false;
-	}
-}
+	} // metode
+} // class
