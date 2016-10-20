@@ -37,8 +37,8 @@ public class KlientLonnskjoring1 {
 		Arbeidstaker.linje('-');
 
 		/* Søk opp en ansatt i firmaet, og skriv ut informasjon om personen */
-//		Meny.meny();
-		lk.finnOgSkrivPerson();
+		lk.meny();
+//		lk.finnOgSkrivPerson();
 
 	}
 

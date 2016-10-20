@@ -153,10 +153,11 @@ public class Arbeidstaker {
 		linje('-');
 	}
 
-	public void lesArbeidtakar() {
+	public void leggTil() {
 		Scanner tast = new Scanner(System.in);
 		System.out.print("Ansatt: ");
-		setNamn(tast.nextLine());
+		setNamn(tast.next());
+		setEtternamn(tast.next());
 		System.out.print("Timesats: ");
 		setTimelon(tast.nextDouble());
 		System.out.print("Antal Timar: ");

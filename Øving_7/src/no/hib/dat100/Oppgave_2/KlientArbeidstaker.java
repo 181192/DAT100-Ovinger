@@ -16,7 +16,7 @@ public class KlientArbeidstaker {
 		Arbeidstaker a2 = new Arbeidstaker();
 		System.out.println();
 		System.out.println(linje + " FYLL INN " + linje);
-		a2.lesArbeidtakar();
+		a2.leggTil();
 		Arbeidstaker.tabellOverskrift();
 		a2.finnOvertidsTimar();
 		a2.finnBruttolon();

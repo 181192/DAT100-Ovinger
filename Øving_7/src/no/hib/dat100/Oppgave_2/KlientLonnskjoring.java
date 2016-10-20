@@ -6,14 +6,14 @@ public class KlientLonnskjoring {
 		Arbeidstaker.passandeOverskrift();
 
 		/* Opprette en tabell for ansatte, med firmanamn og antall plasser */
-		Lonnskjoring lk = new Lonnskjoring();		
+		Lonnskjoring lk = new Lonnskjoring("firmanamn", 10);		
 
 		/* Skriver inn og ut firmanamn, og legger til ansatte i Lonnskjoring tabell */		
 		lk.skrivInnFirmaNamn();
 		lk.skrivUtFirmaNamn();
 				
 		/* Oppretter ansatte */
-		lk.lesArbeidstakarar();		
+		lk.registrerArbeidstakarar();		
 		Arbeidstaker.tabellOverskrift();
 
 		/* Skriver ut lønnsoversikt for de ansatte, 
@@ -25,7 +25,8 @@ public class KlientLonnskjoring {
 		Arbeidstaker.linje('-');
 
 		/* Søk opp en ansatt i firmaet, og skriv ut informasjon om personen */
-//		Meny.meny();
+		lk.meny();
+		
 //		lk.finnOgSkrivPerson();
 
 	}
