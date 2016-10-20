@@ -5,16 +5,16 @@ import java.util.Random;
 public class Terning {
 
 	Random terning = new Random();
-	private int[] STD = new int[100];
+	private int[] antallKast = new int[100];
 	private int[] kast = new int[6];
 	private double gjennomsnitt;
 	private int hiv;
 
 	public void kastTerning() {
-		for (int i = 0; i < STD.length; i++) { // Løkke for tilfeldige tall fra
+		for (int i = 0; i < antallKast.length; i++) { // Løkke for tilfeldige tall fra
 												// 1-6 med 100 plasser i tabell
 			hiv = terning.nextInt(6) + 1; // Genererer tilfeldige tall 1-6
-			STD[i] = hiv;
+			antallKast[i] = hiv;
 			System.out.print(hiv + "  ");
 			if ((i + 1) % 20 == 0) { // Linjeskift på 20 tall
 				System.out.println();
@@ -25,7 +25,7 @@ public class Terning {
 	}
 
 	public void antallKast() { // Antall last er lengden på tabell
-		System.out.println("Antall kast  : " + STD.length + "\n");
+		System.out.println("Antall kast  : " + antallKast.length + "\n");
 	}
 
 	public void kastRes() { // Resutat på hvor mange av hver
@@ -37,17 +37,17 @@ public class Terning {
 
 	public void gjennomsnittVerdi() {
 		double sum = 0;
-		for (int i : STD) { // Summere array med forenklet for-løkke
+		for (int i : antallKast) { // Summere array med forenklet for-løkke
 			sum += i;
 		}
-		gjennomsnitt = sum / STD.length; // Regne gjennomsnitt
+		gjennomsnitt = sum / antallKast.length; // Regne gjennomsnitt
 
 		System.out.println("Gjennomsnittskast : " + gjennomsnitt +"\n");
 	}
 
 	public void førsteSekser() {
 		int teller = 0;
-		while (STD[teller] < 6) { // Første sekser
+		while (antallKast[teller] < 6) { // Første sekser
 			teller++;
 		}
 		System.out.println("Antall kast for å få den første 6-eren : " + (teller + 1) +"\n");
