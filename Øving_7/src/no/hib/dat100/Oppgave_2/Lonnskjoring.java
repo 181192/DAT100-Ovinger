@@ -35,31 +35,58 @@ public class Lonnskjoring {
 	public void setAntalTilsette(int antalTilsette) {
 		this.antalTilsette = antalTilsette;
 	} // set
-
-	public void lesArbeidstakarar(Arbeidstaker a) {
+	
+	/* Leser inn ansatt fra klient */
+	public void lesArbeidstakararEnkel(Arbeidstaker a) {
 		at[antalTilsette] = a;
 		antalTilsette++;
 	} // metode
 
+	/* Leser inn en ansatt om gangen */
+	public void lesArbeidstakarar() {
+		Scanner tast = new Scanner(System.in);
+		System.out.print("Hvor mange arbeidstakarar skal leses inn? ");
+		int lesInnAntall = tast.nextInt();
+		
+		for (int i = 0; i < lesInnAntall; i++) {
+			Arbeidstaker p = new Arbeidstaker();
+			p.lesArbeidtakar();
+			at[antalTilsette] = p;
+			antalTilsette++;
+		}
+		tast.close();
+	} // metode
+
 	/* Finner total overtid over de ansatte */
-	public void finnTotalOvertid() {
-		double sum = 0;
+	public double finnTotalOvertid() {
+		double sumOvertid = 0;
 		for (int j = 0; j < antalTilsette; j++) {
 			double totalOvertid = at[j].finnOvertidsTimar();
-			sum += totalOvertid;
+			sumOvertid += totalOvertid;
 		} // for
-		System.out.printf("%s%.2f%s%n", "Total Overtid\t\t : ", sum, " timer");
+		return sumOvertid;		
 	} // metode
 
 	/* Finner total bruttolønn for de ansatte */
-	public void finnTotalBruttoløn() {
-		double sum = 0;
+	public double finnTotalBruttoløn() {
+		double sumBrutto = 0;
 		for (int j = 0; j < antalTilsette; j++) {
 			double totalBrutto = at[j].finnBruttolon();
-			sum += totalBrutto;
+			sumBrutto += totalBrutto;
 		} // for
-		System.out.printf("%s%.2f%s%n", "Total Bruttolønn\t : ", sum, " kr");
-
+		return sumBrutto;
+	} // metode
+	
+	/* Skriver ut den høyeste bruttolønnen til en av de ansatte */
+	public double skrivHogasteBrutto() {
+		double storste = 0;
+		storste = at[0].finnBruttolon();
+		for (int i = 1; i < antalTilsette; i++) {
+			if (at[i].finnBruttolon() > storste) {
+				storste = at[i].finnBruttolon();
+			} // if
+		} // for		
+		return storste;
 	} // metode
 
 	/* Skriver ut lønnsoversikt til de ansatte */
@@ -69,21 +96,19 @@ public class Lonnskjoring {
 		} // for
 	} // metode
 
-	/* Skriver ut den høyeste bruttolønnen til en av de ansatte */
-	public void skrivHogasteBrutto() {
-		double storste = 0;
-		storste = at[0].finnBruttolon();
-		for (int i = 1; i < antalTilsette; i++) {
-			if (at[i].finnBruttolon() > storste) {
-				storste = at[i].finnBruttolon();
-			} // if
-		} // for
-		System.out.printf("%s%.2f%s%n", "Høyeste Bruttolønn\t : ", storste, " kr");
-	} // metode
 
+	/* Skriv inn firmanavn */
+	public void skrivInnFirmaNamn()	{
+		Scanner tast = new Scanner(System.in);
+		System.out.print("Skriv inn firma namn: ");
+		setFirmanamn(tast.nextLine());
+		System.out.println();
+		tast.close();		
+	} // metode
+	
 	/* Skriv ut firmanavn */
-	public void skrivFirmanavn() {
-		System.out.println("Firmanavn: " + getFirmanamn() + "\n");
+	public void skrivUtFirmaNamn() {		
+		System.out.println("Firmanamn: " + getFirmanamn() + "\n");
 	} // metode
 	
 	/* Informasjon til de ansatte i plass "i" i lønnskjøring tabell */
@@ -106,7 +131,7 @@ public class Lonnskjoring {
 		String namn = "";
 		namn = tast.nextLine();
 		namn = namn.toLowerCase();
-//		tast.close();
+		tast.close();
 
 		if (sluttNamn(namn) == true) {
 			return true;
@@ -148,4 +173,10 @@ public class Lonnskjoring {
 		} // for
 		return false;
 	} // metode
+
+	public void skrivTotalOversikt() {
+		System.out.printf("%s%.2f%s%n", "Total Overtid\t\t : ", finnTotalOvertid(), " timer");
+		System.out.printf("%s%.2f%s%n", "Total Bruttolønn\t : ", finnTotalBruttoløn(), " kr");
+		System.out.printf("%s%.2f%s%n", "Høyeste Bruttolønn\t : ", skrivHogasteBrutto(), " kr");
+	}
 } // class

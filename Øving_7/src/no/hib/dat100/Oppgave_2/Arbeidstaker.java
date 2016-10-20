@@ -156,7 +156,7 @@ public class Arbeidstaker {
 	public void lesArbeidtakar() {
 		Scanner tast = new Scanner(System.in);
 		System.out.print("Ansatt: ");
-		setNamn(tast.next());
+		setNamn(tast.nextLine());
 		System.out.print("Timesats: ");
 		setTimelon(tast.nextDouble());
 		System.out.print("Antal Timar: ");
@@ -164,6 +164,6 @@ public class Arbeidstaker {
 		System.out.print("Skatteprosent: ");
 		setSkatteprosent(tast.nextInt());
 		System.out.println();
-		tast.close();
+//		tast.close();
 	} // metode
 } // class

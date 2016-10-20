@@ -2,7 +2,7 @@ package no.hib.dat100.Oppgave_2;
 
 import java.util.Scanner;
 
-public class Meny {
+public class Meny extends Lonnskjoring {
 	public static void meny() {
 		/* Opprette en tabell for ansatte, med firmanamn og antall plasser */
 		Lonnskjoring lk = new Lonnskjoring("kiwi", 10);
