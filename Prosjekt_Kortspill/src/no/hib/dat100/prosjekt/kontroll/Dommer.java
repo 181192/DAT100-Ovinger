@@ -7,7 +7,7 @@ import no.hib.dat100.prosjekt.modell.Kort;
 
 public class Dommer {
 
-	// gjÃ¸re dommer uavhengig av bunke og hand implementasjon som er oppgaven
+	// gjøre dommer uavhengig av bunke og hand implementasjon som er oppgaven
 	private ArrayList<Kort> nordHand;
 	private ArrayList<Kort> sydHand;
 
@@ -145,19 +145,19 @@ public class Dommer {
 		case TREKK:
 			if (kort != null) {
 				trekkFraBunke(spiller.hvem(), kort);
-				LOGGER.info("UtfÃ¸rer " + "[ " + spiller.hvem() + " " + handling + " " + kort + " med " + antalltrekk
+				LOGGER.info("Utfører " + "[ " + spiller.hvem() + " " + handling + " " + kort + " med " + antalltrekk
 						+ " trekk ] ");
 			} else {
-				LOGGER.severe("UtfÃ¸rer " + "[ " + spiller.hvem() + " " + handling + " (null) med " + antalltrekk
+				LOGGER.severe("Utfører " + "[ " + spiller.hvem() + " " + handling + " (null) med " + antalltrekk
 						+ " trekk ] ");
 			}
 			break;
 		case FORBI:
-			LOGGER.info("UtfÃ¸rer " + handlingstr);
+			LOGGER.info("Utfører " + handlingstr);
 			antalltrekk = 0;
 			break;
 		case LEGGNED:
-			LOGGER.info("UtfÃ¸rer " + handlingstr);
+			LOGGER.info("Utfører " + handlingstr);
 			Kort kortned = handling.getKort();
 			overste = kortned;
 			antalltrekk = 0;

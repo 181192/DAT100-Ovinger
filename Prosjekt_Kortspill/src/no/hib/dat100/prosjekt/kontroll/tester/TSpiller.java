@@ -7,7 +7,7 @@ import no.hib.dat100.prosjekt.modell.Kort;
 
 public class TSpiller extends Spiller {
 
-	//dummy metode for Ã¥ kunne teste den abstrakte klassen Spiller
+	//dummy metode for å kunne teste den abstrakte klassen Spiller
 	public Handling nesteHandling(Kort topp)
 	{
 		return new Handling(HandlingsType.TREKK,null);

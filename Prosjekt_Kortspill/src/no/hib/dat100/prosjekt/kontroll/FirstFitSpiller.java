@@ -5,14 +5,14 @@ import java.util.ArrayList;
 import no.hib.dat100.prosjekt.modell.Kort;
 
 /**
- * Klasse som for Ã‚ representere en vriÃ‚tter spiller. Strategien er Ã‚ lete
- * gjennom kortene man har pÃ‚ hand og spille det fÂ¯rste som er lovlig.
+ * Klasse som for å representere en vriåtter spiller. Strategien er å lete
+ * gjennom kortene man har på hand og spille det første som er lovlig.
  *
  */
 public class FirstFitSpiller extends Spiller {
 
 	/**
-	 * KonstruktÂ¯r.
+	 * Konstruktør.
 	 * 
 	 * @param spiller
 	 *            posisjon for spilleren (nord eller syd).
@@ -22,14 +22,14 @@ public class FirstFitSpiller extends Spiller {
 	}
 
 	/**
-	 * Metode for Ã‚ implementere strategi. Strategien er Ã‚ spille det fÂ¯rste
-	 * kortet som er lovlig (ogsÃ‚ en Ã‚tter selv om man har andre kort som ogsÃ‚
-	 * kan spilles). Dersom man ikke har lovlige kort Ã‚ spille, trekker man om
-	 * man ikke allerede har trukket maks antall ganger. I sÃ‚ fall sier man
+	 * Metode for å implementere strategi. Strategien er å spille det første
+	 * kortet som er lovlig (også en åtter selv om man har andre kort som også
+	 * kan spilles). Dersom man ikke har lovlige kort å spille, trekker man om
+	 * man ikke allerede har trukket maks antall ganger. I så fall sier man
 	 * forbi.
 	 * 
 	 * @param topp
-	 *            kort som ligg Â¯verst pÃ‚ til-bunken.
+	 *            kort som ligg øverst på til-bunken.
 	 */
 	@Override
 	public Handling nesteHandling(Kort topp) {
@@ -42,12 +42,12 @@ public class FirstFitSpiller extends Spiller {
 
 		/* first-fit strategi */
 		
-		// finn det forste kort pï¿½ handen som kan spilles (legges ned)
+		// finn det forste kort på handen som kan spilles (legges ned)
 		// Hint: klassen Regler har en metode som gitt en kort sjekker om det kan legges ned
 		
 		// TODO
 		
-		// Hint: konstruer et handlingsobjekt som beskiver hva spilleren vil gjï¿½re
+		// Hint: konstruer et handlingsobjekt som beskiver hva spilleren vil gjøre
 		// se klassen RandomSpiller som implementerer en Random spiller
 		
 		Handling handling = null;

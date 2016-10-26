@@ -72,13 +72,13 @@ public class Spill {
 	 * det ut kort fra fra-bunken til nord og syd i henhold til regler. Til
 	 * slutt tas Â¯verste kortet fra fra-bunken og legges til til-bunken.
 	 * 
-	 * Nord har type RandomSpiller (som er forhÃ‚ndefinert). Syd vil til slutt vÃŠre spiller
+	 * Nord har type RandomSpiller (som er forhåndefinert). Syd vil til slutt være spiller
 	 * av en klasse laget av gruppen i oppgave 3.
 	 */
 	public void start() {
 		
 		// Hint: vurder om andre private metoder i klassen kan brukes her
-        // i tilegg til metoder pÃ¥ bunker
+        // i tilegg til metoder på bunker
 		
 		// TODO
 		
@@ -99,8 +99,8 @@ public class Spill {
 	}
 
 	/**
-	 * Tar Â¯verste kortet fra fra-bunken og legger dettte til til-bunken (med
-	 * billedsiden opp, men det trenger ikke gruppen tenke pÃ‚).
+	 * Tar øverste kortet fra fra-bunken og legger dettte til til-bunken (med
+	 * billedsiden opp, men det trenger ikke gruppen tenke på).
 	 */
 	private void vendOverste() {
 		
@@ -110,10 +110,10 @@ public class Spill {
 	}
 
 	/**
-	 * NÃ‚r fra-bunken blir tom, tar man vare pÃ‚ kortet pÃ‚ toppen av til-bunken.
+	 * Når fra-bunken blir tom, tar man vare på kortet på toppen av til-bunken.
 	 * Deretter legges alle den andre kortene i til-bunken over i fra-bunken.
-	 * Denne stokkes og kortet som man har tatt vare pÃ‚ legges tilbake i
-	 * til-bunken. Det vil nÃ‚r vÃŠre det eneste kortet i til-bunken.
+	 * Denne stokkes og kortet som man har tatt vare på legges tilbake i
+	 * til-bunken. Det vil når være det eneste kortet i til-bunken.
 	 */
 	public void snuTilBunken() {
 
@@ -125,7 +125,7 @@ public class Spill {
 
 	/**
 	 * Trekker et kort fra fra-bunken til spilleren gitt som parameter. Om
-	 * fra-bunken er tom, mÃ‚ man "snu" til-bunken. Se info om metoden
+	 * fra-bunken er tom, må man "snu" til-bunken. Se info om metoden
 	 * snuTilBunken().
 	 * 
 	 * @param spiller
@@ -165,9 +165,9 @@ public class Spill {
 	}
 
 	/**
-	 * Gir antall kort nord har pÃ‚ hÃ‚nden.
+	 * Gir antall kort nord har på handen.
 	 * 
-	 * @return antall kort nord har pÃ‚ hÃ‚nden.
+	 * @return antall kort nord har på handen.
 	 */
 	public int antallNord() {
 		
@@ -201,10 +201,10 @@ public class Spill {
 	}
 
 	/**
-	 * Metode som leser Â¯verste kortet i til-bunken. Kortet vil fremdeles vÃŠre
-	 * Â¯verst i til-bunken etter at metoden er utfÂ¯rt.
+	 * Metode som leser øverste kortet i til-bunken. Kortet vil fremdeles være
+	 * øverst i til-bunken etter at metoden er utført.
 	 * 
-	 * @return Â¯verste kortet i til-bunken.
+	 * @return øverste kortet i til-bunken.
 	 */
 	public Kort seOverste() {
 		
@@ -231,12 +231,12 @@ public class Spill {
 	 * @param spiller
 	 *            spiller som handle.
 	 * 
-	 * @return handlingen som skal utfÂ¯res av spillet.
+	 * @return handlingen som skal utføres av spillet.
 	 */
 	public Handling nesteHandling(ISpiller spiller) {
 		
 		// TODO
-		// Hint: bruk nesteHandling metoden pÃ¥ en spiller
+		// Hint: bruk nesteHandling metoden på en spiller
 		
 		throw new RuntimeException("Metode nesteHandling ikke implementert");
 	}
@@ -244,7 +244,7 @@ public class Spill {
 	/**
 	 * Metoden spiller et kort. Den sjekker at spiller har kortet. Dersom det er
 	 * tilfelle, fjernes kortet fra spilleren og legges til til-bunken. Metoden
-	 * nulltiller ogsÃ‚ antall ganger spilleren har trukket kort.
+	 * nulltiller også antall ganger spilleren har trukket kort.
 	 * 
 	 * @param spiller
 	 *            den som spiller.
@@ -261,7 +261,7 @@ public class Spill {
 	}
 
 	/**
-	 * Metode for Ã‚ si forbi. MÃ‚ nullstille antall ganger spilleren har trukket
+	 * Metode for å si forbi. Må nullstille antall ganger spilleren har trukket
 	 * kort.
 	 * 
 	 * @param spiller
@@ -275,13 +275,13 @@ public class Spill {
 	}
 
 	/**
-	 * Metode for Ã‚ utfÂ¯re en handling (trekke, spille, forbi). Dersom hanling
-	 * er kort, blir kortet ogsÃ‚ spilt.
+	 * Metode for å utføre en handling (trekke, spille, forbi). Dersom hanling
+	 * er kort, blir kortet også spilt.
 	 * 
 	 * @param spiller
-	 *            spiller som utfÂ¯rer handlingen.
+	 *            spiller som utfører handlingen.
 	 * @param handling
-	 *            handling som utfÂ¯res.
+	 *            handling som utføres.
 	 * 
 	 * @return kort som trekkes, kort som spilles eller null ved forbi.
 	 */
@@ -292,7 +292,7 @@ public class Spill {
 		// TODO
 		// Hint: del opp i de tre mulige handlinger og vurder 
 		// om noen andre private metoder i klassen kan brukes
-		// til Ã¥ implementere denne metoden
+		// til å implementere denne metoden
 		
 		throw new RuntimeException("Metode utforHandling ikke implementert");
 	}
@@ -303,7 +303,7 @@ public class Spill {
 	 * @param kort
 	 *            kort som spilles.
 	 * 
-	 * @return true dersom kortet er lovlig Ã‚ spille, false ellers.
+	 * @return true dersom kortet er lovlig å spille, false ellers.
 	 */
 	public boolean nedkortSyd(Kort kort) {
 		
@@ -313,9 +313,9 @@ public class Spill {
 	}
 
 	/**
-	 * ForeslÃ‚r hva syd skal spille.
+	 * Foreslår hva syd skal spille.
 	 * 
-	 * @return kort som blir foreslÃ‚tt.
+	 * @return kort som blir foreslått.
 	 */
 	public Kort foreslaaKortSyd() {
 		

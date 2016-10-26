@@ -36,7 +36,7 @@ public class Tur {
 		}
 	}
 
-	// TODO: kanskje flyttes til kontroll og implementer som ferdig nÃ¥r en av
+	// TODO: kanskje flyttes til kontroll og implementer som ferdig når en av
 	// spillere er tom
 	public static void ferdig() {
 		aktiv = Spillere.INGEN;

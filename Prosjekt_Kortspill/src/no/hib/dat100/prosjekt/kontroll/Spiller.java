@@ -6,11 +6,11 @@ import no.hib.dat100.prosjekt.modell.Kort;
 /**
  * Abstrakt klasse som implementerer alle metodene i kontrakten ISpiller,
  * bortsett fra nesteHandling(). Dette er grunnen til at klassen er abstrakt.
- * For Ã‚ lage "virkelige" spillere, mÃ‚ vi arve fra denne klassen og implmentere
+ * For å lage "virkelige" spillere, må vi arve fra denne klassen og implmentere
  * nesteHandling (fra ISpiller).
  * 
  * Klassen har objektvariablene hand (Hand), antalltrekk (heltall) og spiller
- * (Spillere). Den har to konstruktÂ¯rer. Se beskrivelse av disse.
+ * (Spillere). Den har to konstruktører. Se beskrivelse av disse.
  * 
  */
 public abstract class Spiller implements ISpiller {
@@ -25,7 +25,7 @@ public abstract class Spiller implements ISpiller {
 	private Spillere spiller;
 
 	/**
-	 * Standard konstruktÂ¯r som oppretter en Spiller med en hÃ‚nd uten kort,
+	 * Standard konstruktør som oppretter en Spiller med en hand uten kort,
 	 * antalltrekk som 0 og setter spiller til Spillere.INGEN.
 	 */
 	public Spiller() {
@@ -36,7 +36,7 @@ public abstract class Spiller implements ISpiller {
 	}
 
 	/**
-	 * KonstruktÂ¯r der vi kan sette hvilken spiller det er (NORD, SYD eller
+	 * Konstruktør der vi kan sette hvilken spiller det er (NORD, SYD eller
 	 * INGEN).
 	 * 
 	 * @param spiller

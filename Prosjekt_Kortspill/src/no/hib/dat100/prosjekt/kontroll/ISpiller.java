@@ -5,16 +5,16 @@ import no.hib.dat100.prosjekt.modell.Kort;
 
 public interface ISpiller {
 	/**
-	 * Henter spillerens hÂnd.
+	 * Henter spillerens hand.
 	 * 
-	 * @return hÂnden til spilleren
+	 * @return handen til spilleren
 	 */
 	public Hand getHand();
 
 	/**
-	 * Gir antall kort spilleren har pÂ hÂnd.
+	 * Gir antall kort spilleren har p� hand.
 	 * 
-	 * @return antall kort spilleren har pÂ hÂnd.
+	 * @return antall kort spilleren har p� hand.
 	 */
 	public int getAntallKort();
 
@@ -26,14 +26,14 @@ public interface ISpiller {
 	public Spillere hvem();
 
 	/**
-	 * Avjg¯r om spiller er ferdig (har ingen kort).
+	 * Avgj�r om spiller er ferdig (har ingen kort).
 	 * 
 	 * @return true om spilleren er ferdig, false ellers.
 	 */
 	public boolean erFerdig();
 
 	/**
-	 * Legger et kort til spillerens hÂnd.
+	 * Legger et kort til spillerens hand.
 	 * 
 	 * @param kort
 	 *            kortet som legges til.
@@ -41,16 +41,16 @@ public interface ISpiller {
 	public void leggTilKort(Kort kort);
 
 	/**
-	 * Fjerner et kort fra spillerens hÂnd. Kortet skal finnes ved hjelp av
+	 * Fjerner et kort fra spillerens hand. Kortet skal finnes ved hjelp av
 	 * equals() metonden i kort.
 	 * 
 	 * @param kort
-	 *            som skal fjernes fra hÂnden.
+	 *            som skal fjernes fra handen.
 	 */
 	public void fjernKort(Kort kort);
 
 	/**
-	 * Fjerner alle kort fra hÂnden slik at man er klar for neste spill.
+	 * Fjerner alle kort fra handen slik at man er klar for neste spill.
 	 */
 	public void fjernAlleKort();
 
@@ -63,14 +63,14 @@ public interface ISpiller {
 	public void trekker(Kort kort);
 
 	/**
-	 * Antall ganger spiller har trukket fra bunken mens han har vÊrt i tur.
+	 * Antall ganger spiller har trukket fra bunken mens han har v�rt i tur.
 	 * 
 	 * @return antall ganger spilleren har trukket.
 	 */
 	public int getAntallTrekk();
 
 	/**
-	 * Kan angi hvor mange ganger spilleren har trukket. Spesielt aktuelt for Â
+	 * Kan angi hvor mange ganger spilleren har trukket. Spesielt aktuelt for �
 	 * kunne sette antall trekk til 0 (etter spilleren har spilt et kort eller
 	 * sagt forbi).
 	 * 
@@ -83,7 +83,7 @@ public interface ISpiller {
 	 * Gir neste handling (spill et kort, trekk et kort, eller forbi).
 	 * 
 	 * @param topp
-	 *            kortet ¯verts i bunken til.
+	 *            kortet �verts i bunken til.
 	 * @return neste handling.
 	 */
 	public Handling nesteHandling(Kort topp);
