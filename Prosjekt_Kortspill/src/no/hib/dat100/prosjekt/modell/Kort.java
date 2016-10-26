@@ -1,7 +1,7 @@
 package no.hib.dat100.prosjekt.modell;
 
 /**
- * Klasse for Ã‚ representere et spillkort. Kortene har en farge (bestemt av
+ * Klasse for å representere et spillkort. Kortene har en farge (bestemt av
  * oppramstypen Kortfarge) og en verdi (1,..., 13) der 1 = ess, 11 = knekt, 12 =
  * dame, 13 = konge.
  *
@@ -16,7 +16,7 @@ public class Kort implements Comparable<Kort> {
 	 * Oppretter et kort med gitt farge og verdi.
 	 * 
 	 * @param farge
-	 *            fargen pÃ‚ kortet (klÂ¯ver, hjerter, ruter, spar).
+	 *            fargen på‚ kortet (kløver, hjerter, ruter, spar).
 	 * @param verdi
 	 *            heltall 1,...13
 	 */
@@ -26,7 +26,7 @@ public class Kort implements Comparable<Kort> {
 	}
 
 	/**
-	 * Gir fargen pÃ‚ kortet.
+	 * Gir fargen på kortet.
 	 * 
 	 * @return fargen
 	 */
@@ -45,7 +45,7 @@ public class Kort implements Comparable<Kort> {
 	}
 
 	/**
-	 * Gir verdien pÃ‚ kortet
+	 * Gir verdien på kortet
 	 * 
 	 * @return verdi (1 = ess, 2,...,10, 11 = knekt, 12 = dame, 13 = konge)
 	 */
@@ -88,9 +88,9 @@ public class Kort implements Comparable<Kort> {
 	}
 
 	/**
-	 * NÃ‚r vi overkjÂ¯rer equals(), skal vi ogsÃ‚ som hovedregel overkjÂ¯re
+	 * Når vi overkjører equals(), skal vi også‚ som hovedregel overkjøre
 	 * hashCode(). Denne er automatisk generert i Eclipse. Trenger ikke brukes i
-	 * prosjektet, men er korrekt om noen Â¯nsker Ã‚ bruke den.
+	 * prosjektet, men er korrekt om noen ønsker å bruke den.
 	 */
 	@Override
 	public int hashCode() {
@@ -133,14 +133,14 @@ public class Kort implements Comparable<Kort> {
 
 	@Override
 	/**
-	 * Sammenliger this kort med kort. Kortene ordnes fÂ¯rst etter farge,
+	 * Sammenliger this kort med kort. Kortene ordnes først etter farge,
 	 * deretter verdi.
 	 * 
 	 * @param kort
 	 *            objektet som this blir sammenlignet med.
 	 * 
 	 * @return Verdien 0 om korta er like, en verdi mindre enn 0 om this kjem
-	 *         fÂ¯rst og en verdi stÂ¯rren enn 0 om this kjem sist.
+	 *         først og en verdi størren enn 0 om this kjem sist.
 	 */
 	public int compareTo(Kort kort) {
 		if (this.farge != kort.farge) {

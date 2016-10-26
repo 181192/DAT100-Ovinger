@@ -1,7 +1,7 @@
 package no.hib.dat100.prosjekt.modell;
 
 /**
- * Klasse for Ã‚ representere en hand. Kortene er sortert i henhold compareTo()
+ * Klasse for å‚ representere en hand. Kortene er sortert i henhold compareTo()
  * for Kort.
  * 
  */
@@ -23,14 +23,14 @@ public class Hand extends KortSamling {
 	 */
 	@Override
 	public void leggTil(Kort kort) {
-		// Hint: se pï¿½ hvilke metoder som finnes i denne klassen og superklassen
+		// Hint: se på hvilke metoder som finnes i denne klassen og superklassen
 		
 		// TODO
 		throw new RuntimeException("Metode leggTil ikke implementert");
 	}
 
 	/**
-	 * Sorterer en hand. RekkefÂ¯lgen er bestemt av compareTo() i Kort-klassen.
+	 * Sorterer en hand. Rekkefølgen er bestemt av compareTo() i Kort-klassen.
 	 * 
 	 * @see Kort
 	 */

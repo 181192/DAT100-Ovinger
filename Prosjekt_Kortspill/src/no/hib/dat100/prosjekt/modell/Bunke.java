@@ -1,7 +1,7 @@
 package no.hib.dat100.prosjekt.modell;
 
 /**
- * Klasse for Ã‚ representere en bunke kort. Kan om nÂ¯dvendig inneholde hele
+ * Klasse for å‚ representere en bunke kort. Kan om nødvendig inneholde hele
  * kortstokken. Man kan bare ta ut / trekke fra toppen av bunken.
  *
  */
@@ -17,13 +17,13 @@ public class Bunke extends KortSamling {
 	}
 
 	/**
-	 * Fjerner kortet som ligger pÃ‚ toppen av bunken.
+	 * Fjerner kortet som ligger på‚ toppen av bunken.
 	 * 
-	 * @return Kortet pÃ‚ toppen av bunken. Kortet blir fjernet fra bunken.
+	 * @return Kortet på‚ toppen av bunken. Kortet blir fjernet fra bunken.
 	 * 
 	 */
 	public Kort trekk() {
-		// Hint: se pï¿½ metoder i superklassen
+		// Hint: se på metoder i superklassen
 		
 		// TODO
 		
@@ -31,9 +31,9 @@ public class Bunke extends KortSamling {
 	}
 
 	/**
-	 * "Ser" pÃ‚ kortet som ligger pÃ‚ toppen av bunken.
+	 * "Ser" på‚ kortet som ligger på‚ toppen av bunken.
 	 * 
-	 * @return referanse til kortet pÃ‚ toppen av bunken. Kortet blir ikke
+	 * @return referanse til kortet på‚ toppen av bunken. Kortet blir ikke
 	 *         fjernet.
 	 * 
 	 */

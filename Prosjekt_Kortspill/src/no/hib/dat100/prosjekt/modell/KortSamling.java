@@ -18,7 +18,7 @@ public abstract class KortSamling {
 	// tabell for representasjon av samling av kort
 	private Kort[] samling;
 	
-	// index pï¿½ forste ledige plass
+	// index på forste ledige plass
 	private int forsteledig;
 
 	/**
@@ -42,10 +42,10 @@ public abstract class KortSamling {
 	}
 
 	/**
-	 * Returnerer en tabell med kortene i samlinga. Tabellen trenger ikke vÃŠre
-	 * full. Kortene ligger sammenhengende fra starten av tabellen. Kan fÃ‚
-	 * tilgang til antallet ved Ã‚ bruke metoden getAntallKort(). Metoden er
-	 * fÂ¯rst og fremst ment Ã‚ brukes i eventuelle subklasser. Om man trenger
+	 * Returnerer en tabell med kortene i samlinga. Tabellen trenger ikke være
+	 * full. Kortene ligger sammenhengende fra starten av tabellen. Kan få
+	 * tilgang til antallet ved å‚ bruke metoden getAntallKort(). Metoden er
+	 * først og fremst ment å brukes i eventuelle subklasser. Om man trenger
 	 * kortene utenfor arvehierarkiet, anbefales metoden toArrayList().
 	 * 
 	 * @return tabell av kort.
@@ -69,8 +69,8 @@ public abstract class KortSamling {
 	}
 
 	/**
-	 * Legger alle korta (hele kortstokken) til samlnga. Korta vil vÃŠre sortert
-	 * slik at de normalt mÃ‚ stokkes fÂ¯r bruk.
+	 * Legger alle korta (hele kortstokken) til samlnga. Korta vil være sortert
+	 * slik at de normalt må stokkes får bruk.
 	 */
 	public void leggTilAlle() {
 		// Hint: Kortfarge.values() gir en tabell med alle kortfarger	
@@ -104,7 +104,7 @@ public abstract class KortSamling {
 	}
 
 	/**
-	 * Ser pÃ‚ siste kortet i samlinga.
+	 * Ser på siste kortet i samlinga.
 	 * 
 	 * @return siste kortet i samlinga, men det blir ikke fjernet.
 	 */
@@ -129,7 +129,7 @@ public abstract class KortSamling {
 	}
 
 	/**
-	 * UndersÂ¯ker om et kort finst i samlinga.
+	 * Undersøker om et kort finst i samlinga.
 	 * 
 	 * @param kort.
 	 * 
@@ -143,7 +143,7 @@ public abstract class KortSamling {
 	}
 
 	/**
-	 * Fjernar et kort frÃ‚ samlinga. Dersom kortet ikke finnest i samlinga,
+	 * Fjernar et kort frå samlinga. Dersom kortet ikke finnest i samlinga,
 	 * skjer ingenting.
 	 * 
 	 * @param kort
@@ -155,7 +155,7 @@ public abstract class KortSamling {
 		
 		// TODO
 		
-		// Hint: fjern kortet - men husk kortet kan sitte pï¿½ en plass i midten
+		// Hint: fjern kortet - men husk kortet kan sitte på en plass i midten
 		
 		// TODO
 		
@@ -163,10 +163,10 @@ public abstract class KortSamling {
 	}
 
 	/**
-	 * Stokkar en kortsamling ved Ã¥ bytte rundt pÃ¥ kort 
+	 * Stokkar en kortsamling ved å bytte rundt på kort 
 	 */
 	public void stokk() {
-		// Hint: en mulighet er bruk av klassen Random for ï¿½ generere tilfeldige index
+		// Hint: en mulighet er bruk av klassen Random for å generere tilfeldige index
 		
 		// TODO
 		
@@ -176,7 +176,7 @@ public abstract class KortSamling {
 	/**
 	 * Gir kortene som en ArrayList.
 	 * 
-	 * @return samlinga av kort som en ArrayList. Korta vil ha samme rekkefÂ¯lge
+	 * @return samlinga av kort som en ArrayList. Korta vil ha samme rekkefølge
 	 *         som i kortsamlinga.
 	 */
 	public ArrayList<Kort> toArrayList() {
