@@ -4,5 +4,5 @@ import no.hib.dat100.prosjekt.modell.KortSamling;
 
 public class TKortSamling extends KortSamling {
 
-	// Dummy klasse for Ã¥ gjÃ¸re den abstrakte klasse KortSamling testbar
+	// Dummy klasse for å gjøre den abstrakte klasse KortSamling testbar
 }
