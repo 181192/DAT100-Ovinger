@@ -65,7 +65,7 @@ public class Utsyn extends JFrame {
 	private ArrayList<GUIKort> guikort;
 
 	public Utsyn(Kontroll kontroll) {
-		super("vri-\u00e5tte");
+		super("vriåtte");
 
 		this.kontroll = kontroll;
 
@@ -255,8 +255,8 @@ public class Utsyn extends JFrame {
 
 	public void visAlleKortSyd() {
 		syd.removeAll();
-		// TODO: implementer sÃ¥ eksisterende elementer genbrukes
-		// og der blott skiftes ikon pÃ¥ det.
+		// TODO: implementer så eksisterende elementer genbrukes
+		// og der blott skiftes ikon på det.
 
 		sydhand = new JButton(sydikon);
 		sydhand.setMargin(new Insets(0, 0, 0, 0));

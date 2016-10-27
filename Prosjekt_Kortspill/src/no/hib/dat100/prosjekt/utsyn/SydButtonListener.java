@@ -10,7 +10,7 @@ public class SydButtonListener implements ActionListener {
 
 	private Utsyn utsyn;
 
-	public static String TREKK_FORBI_STR = "Du mÃ¥ trekke kort eller melde forbi.";
+	public static String TREKK_FORBI_STR = "Du må trekke kort eller melde forbi.";
 
 	public SydButtonListener(Utsyn utsyn) {
 		this.utsyn = utsyn;
