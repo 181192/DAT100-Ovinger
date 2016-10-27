@@ -96,7 +96,7 @@ public class Kontroll {
 	// metoder som kaldes ved klikk p√• ikoner
 	//
 
-	// kaldes ved klikk p√• fra bunken med syd aktiv spiller
+	// kaldes ved klikk pÂ fra bunken med syd aktiv spiller
 	public Kort trekkFraBunke() {
 
 		Kort kort = null;
@@ -134,13 +134,13 @@ public class Kontroll {
 		}
 	}
 
-	// kaldes ved klikk p√• nord spiller ikon
+	// kaldes ved klikk pÂ nord spiller ikon
 	public void handlingNord() {
 		ISpiller nord = spill.getNord();
 		handlingSpiller(nord);
 	}
 
-	// kaldes ved klikk p√• tur ikon n√•r syd sin tur
+	// kaldes ved klikk pÂ tur ikon nÂr syd sin tur
 	public boolean sydForbi() {
 
 		Handling handling = new Handling(HandlingsType.FORBI, null);
@@ -158,12 +158,12 @@ public class Kontroll {
 		return ok;
 	}
 
-	// kaldes ved klikk p√• spillerikon for syd.
+	// kaldes ved klikk pÂ spillerikon for syd.
 	public Kort foreslaaSyd() {
 		return spill.foreslaaKortSyd();
 	}
 
-	// kaldes ved klikk p√• et kort hos syd.
+	// kaldes ved klikk pÂ et kort hos syd.
 	public boolean leggnedKortSyd(Kort kort) {
 
 		boolean ok;
