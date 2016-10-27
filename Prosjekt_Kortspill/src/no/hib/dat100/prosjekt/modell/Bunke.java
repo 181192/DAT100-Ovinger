@@ -23,11 +23,8 @@ public class Bunke extends KortSamling {
 	 * 
 	 */
 	public Kort trekk() {
-		// Hint: se på metoder i superklassen
-		
-		// TODO
-		
-		throw new RuntimeException("Metode trekk ikke implementert");
+		// Hint: se på metoder i superklassen		
+		return super.taSiste();
 	}
 
 	/**
@@ -38,9 +35,6 @@ public class Bunke extends KortSamling {
 	 * 
 	 */
 	public Kort topp() {
-		
-		// TODO
-		
-		throw new RuntimeException("Metode topp ikke implementert");
+		return super.seSiste();
 	}
 }
