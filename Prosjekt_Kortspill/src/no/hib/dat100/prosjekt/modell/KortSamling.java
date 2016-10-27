@@ -177,18 +177,14 @@ public abstract class KortSamling {
 	public void stokk() {
 		// Hint: en mulighet er bruk av klassen Random for å generere tilfeldige
 		// index
-
 		Random random = new Random();
-		int[] tf = new int[MAKS_KORT];
-		int index = 0;
-		for (int i = 0; i <= MAKS_KORT; i++) {
-			index = random.nextInt(MAKS_KORT);
-			for (int j = 0; j <= tf.length; j++) {
-				if (index != tf[j]) {
-					samling[i] = samling[index];
-				}
-				forsteledig = random.nextInt(MAKS_KORT);
-			}
+
+		for (int i = forsteledig + 1; i < 0; i--) {
+			int p = random.nextInt(MAKS_KORT);
+			Kort k = samling[i];
+			
+			samling[i] = samling[p];
+			samling[p] = k;
 		}
 	}
 
