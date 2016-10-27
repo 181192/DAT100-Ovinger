@@ -14,12 +14,12 @@ import no.hib.dat100.prosjekt.modell.Kort;
 public class Spill {
 
 	// objektvariable for et spill
-	
+
 	// de to spillere
 	private ISpiller nord;
 	private ISpiller syd;
-	
-	// de to bunker 
+
+	// de to bunker
 	private Bunke bunkeFra;
 	private Bunke bunkeTil;
 
@@ -29,10 +29,7 @@ public class Spill {
 	 * @return referanse/peker til syd.
 	 */
 	public ISpiller getSyd() {
-		
-		// TODO
-		
-		throw new RuntimeException("Metode getSyd ikke implementert");
+		return syd;
 	}
 
 	/**
@@ -41,10 +38,7 @@ public class Spill {
 	 * @return referanse/peker til nord.
 	 */
 	public ISpiller getNord() {
-		
-		// TODO
-		
-		throw new RuntimeException("Metode getNord ikke implementert");
+		return nord;
 	}
 
 	/**
@@ -53,35 +47,29 @@ public class Spill {
 	 * @return referanse/peker til til-bunken.
 	 */
 	public Bunke getBunkeTil() {
-		
-		// TODO
-		
-		throw new RuntimeException("Metode getBunkeTil ikke implementert");
+		return bunkeTil;
 	}
 
 	public Bunke getBunkeFra() {
-		
-		// TODO
-		
-		throw new RuntimeException("Metode getBunkeFra ikke implementert");
+		return bunkeFra;
 	}
 
 	/**
 	 * Metoden oppretter to spillere, nord og syd. Det opprettes to bunker, fra
 	 * og til. Alle kortene legges til fra. Bunken fra stokkes. Deretter deles
 	 * det ut kort fra fra-bunken til nord og syd i henhold til regler. Til
-	 * slutt tas Â¯verste kortet fra fra-bunken og legges til til-bunken.
+	 * slutt tas øverste kortet fra fra-bunken og legges til til-bunken.
 	 * 
-	 * Nord har type RandomSpiller (som er forhåndefinert). Syd vil til slutt være spiller
-	 * av en klasse laget av gruppen i oppgave 3.
+	 * Nord har type RandomSpiller (som er forhåndefinert). Syd vil til slutt
+	 * være spiller av en klasse laget av gruppen i oppgave 3.
 	 */
 	public void start() {
-		
+
 		// Hint: vurder om andre private metoder i klassen kan brukes her
-        // i tilegg til metoder på bunker
-		
+		// i tilegg til metoder på bunker
+
 		// TODO
-		
+
 		throw new RuntimeException("Metode start ikke implementert");
 	}
 
@@ -92,9 +80,9 @@ public class Spill {
 	private void delutKort() {
 
 		// Husk: Klassen Regler angir hvor mange kort hver spiller skal ha
-		
+
 		// TODO
-		
+
 		throw new RuntimeException("Metode delutKort ikke implementert");
 	}
 
@@ -103,9 +91,9 @@ public class Spill {
 	 * billedsiden opp, men det trenger ikke gruppen tenke på).
 	 */
 	private void vendOverste() {
-		
+
 		// TODO
-		
+
 		throw new RuntimeException("Metode vendOverste ikke implementert");
 	}
 
@@ -117,9 +105,8 @@ public class Spill {
 	 */
 	public void snuTilBunken() {
 
-		
 		// TODO
-		
+
 		throw new RuntimeException("Metode snuTilBunken ikke implementert");
 	}
 
@@ -136,7 +123,7 @@ public class Spill {
 	public Kort trekkFraBunke(ISpiller spiller) {
 
 		// TODO
-		
+
 		throw new RuntimeException("Metode trekkFraBunke ikke implementert");
 	}
 
@@ -146,9 +133,9 @@ public class Spill {
 	 * @return true om til-bunken er tom, false ellers.
 	 */
 	public boolean bunketilTom() {
-		
+
 		// TODO
-		
+
 		throw new RuntimeException("Metode bunkeTilTom ikke implementert");
 	}
 
@@ -158,9 +145,9 @@ public class Spill {
 	 * @return true om fra-bunken er tom, false ellers.
 	 */
 	public boolean bunkefraTom() {
-		
+
 		// TODO
-		
+
 		throw new RuntimeException("Metode bunkefraTom ikke implementert");
 	}
 
@@ -170,9 +157,9 @@ public class Spill {
 	 * @return antall kort nord har på handen.
 	 */
 	public int antallNord() {
-		
+
 		// TODO
-		
+
 		throw new RuntimeException("Metode antallNord ikke implementert");
 	}
 
@@ -182,9 +169,9 @@ public class Spill {
 	 * @return antall kort i fra-bunken.
 	 */
 	public int antallBunkeFra() {
-		
+
 		// TODO
-		
+
 		throw new RuntimeException("Metode antallBunkeFra ikke implementert");
 	}
 
@@ -194,9 +181,9 @@ public class Spill {
 	 * @return antall kort i til-bunken.
 	 */
 	public int antallBunkeTil() {
-		
+
 		// TODO
-		
+
 		throw new RuntimeException("Metode antallBunkeTil ikke implementert");
 	}
 
@@ -207,9 +194,9 @@ public class Spill {
 	 * @return øverste kortet i til-bunken.
 	 */
 	public Kort seOverste() {
-		
+
 		// TODO
-		
+
 		throw new RuntimeException("Metode seOverste ikke implementert");
 	}
 
@@ -219,14 +206,15 @@ public class Spill {
 	 * @return syds hand som en ArrayList av Kort.
 	 */
 	public ArrayList<Kort> getSydHand() {
-		
+
 		// TODO
-		
+
 		throw new RuntimeException("Metode getSydHand ikke implementert");
 	}
 
 	/**
-	 * Bestemmer neste handling for en spiller (spilt et kort, trekker et kort, forbi)
+	 * Bestemmer neste handling for en spiller (spilt et kort, trekker et kort,
+	 * forbi)
 	 * 
 	 * @param spiller
 	 *            spiller som handle.
@@ -234,10 +222,10 @@ public class Spill {
 	 * @return handlingen som skal utføres av spillet.
 	 */
 	public Handling nesteHandling(ISpiller spiller) {
-		
+
 		// TODO
 		// Hint: bruk nesteHandling metoden på en spiller
-		
+
 		throw new RuntimeException("Metode nesteHandling ikke implementert");
 	}
 
@@ -254,9 +242,9 @@ public class Spill {
 	 * @return true dersom spilleren har kortet, false ellers.
 	 */
 	public boolean leggnedKort(ISpiller spiller, Kort kort) {
-		
+
 		// TODO
-		
+
 		throw new RuntimeException("Metode leggnedKort ikke implementert");
 	}
 
@@ -268,9 +256,9 @@ public class Spill {
 	 *            spilleren som er i tur.
 	 */
 	public void forbiSpiller(ISpiller spiller) {
-		
+
 		// TODO
-		
+
 		throw new RuntimeException("Metode forbiSpiller ikke implementert");
 	}
 
@@ -290,10 +278,10 @@ public class Spill {
 		Kort kort = null;
 
 		// TODO
-		// Hint: del opp i de tre mulige handlinger og vurder 
+		// Hint: del opp i de tre mulige handlinger og vurder
 		// om noen andre private metoder i klassen kan brukes
 		// til å implementere denne metoden
-		
+
 		throw new RuntimeException("Metode utforHandling ikke implementert");
 	}
 
@@ -306,9 +294,9 @@ public class Spill {
 	 * @return true dersom kortet er lovlig å spille, false ellers.
 	 */
 	public boolean nedkortSyd(Kort kort) {
-		
+
 		// TODO
-		
+
 		throw new RuntimeException("Metode nedkortSyd ikke implementert");
 	}
 
@@ -318,10 +306,10 @@ public class Spill {
 	 * @return kort som blir foreslått.
 	 */
 	public Kort foreslaaKortSyd() {
-		
+
 		// TODO
 		// Hint: bruk nesteHandling metoden for en spiller
-		
+
 		throw new RuntimeException("Metode foreslqqKortSyd ikke implementert");
 	}
 }
