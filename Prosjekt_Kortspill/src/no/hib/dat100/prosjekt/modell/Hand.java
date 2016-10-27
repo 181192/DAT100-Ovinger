@@ -24,9 +24,8 @@ public class Hand extends KortSamling {
 	@Override
 	public void leggTil(Kort kort) {
 		// Hint: se på hvilke metoder som finnes i denne klassen og superklassen
-		
-		// TODO
-		throw new RuntimeException("Metode leggTil ikke implementert");
+		super.leggTil(kort);
+		sorter();
 	}
 
 	/**
