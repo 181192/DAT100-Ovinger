@@ -68,9 +68,18 @@ public class Spill {
 		// Hint: vurder om andre private metoder i klassen kan brukes her
 		// i tilegg til metoder på bunker
 
-		// TODO
+		Spill spill = new Spill();
 
-		throw new RuntimeException("Metode start ikke implementert");
+		nord = new RandomSpiller(Spillere.NORD);
+		syd = new FirstFitSpiller(Spillere.SYD);
+
+		bunkeFra = new Bunke();
+		bunkeTil = new Bunke();
+
+		bunkeFra.leggTilAlle();
+		bunkeFra.stokk();
+		delutKort();
+		vendOverste();
 	}
 
 	/**
@@ -80,10 +89,10 @@ public class Spill {
 	private void delutKort() {
 
 		// Husk: Klassen Regler angir hvor mange kort hver spiller skal ha
-
-		// TODO
-
-		throw new RuntimeException("Metode delutKort ikke implementert");
+		for (int i = 0; i < nord.getAntallTrekk(); i++) {
+			syd.leggTilKort(bunkeFra.trekk());
+			nord.leggTilKort(bunkeFra.trekk());
+		}
 	}
 
 	/**
@@ -91,10 +100,7 @@ public class Spill {
 	 * billedsiden opp, men det trenger ikke gruppen tenke på).
 	 */
 	private void vendOverste() {
-
-		// TODO
-
-		throw new RuntimeException("Metode vendOverste ikke implementert");
+		bunkeTil.leggTil(bunkeFra.trekk());
 	}
 
 	/**
@@ -105,9 +111,19 @@ public class Spill {
 	 */
 	public void snuTilBunken() {
 
-		// TODO
+		Bunke taVarepaa = new Bunke();
 
-		throw new RuntimeException("Metode snuTilBunken ikke implementert");
+		if (bunkeFra.erTom()) {
+			taVarepaa.leggTil(bunkeTil.trekk());
+			
+			for (int i = 0; i < bunkeTil.getAntalKort(); i++) {
+				bunkeFra.leggTil(bunkeTil.trekk());
+			}
+			bunkeTil.fjernAlle();
+			bunkeFra.leggTilAlle();
+			bunkeFra.stokk();			
+			bunkeTil.leggTil(taVarepaa.trekk());
+		}
 	}
 
 	/**
@@ -122,9 +138,16 @@ public class Spill {
 	 */
 	public Kort trekkFraBunke(ISpiller spiller) {
 
-		// TODO
-
-		throw new RuntimeException("Metode trekkFraBunke ikke implementert");
+		Kort taKort;
+		if (!bunkeFra.erTom()) {
+			taKort = bunkeFra.taSiste();
+			spiller.trekker(taKort);
+		} else {
+			snuTilBunken();
+			taKort = bunkeFra.taSiste();
+			spiller.trekker(taKort);
+		}
+		return taKort;
 	}
 
 	/**
@@ -133,10 +156,7 @@ public class Spill {
 	 * @return true om til-bunken er tom, false ellers.
 	 */
 	public boolean bunketilTom() {
-
-		// TODO
-
-		throw new RuntimeException("Metode bunkeTilTom ikke implementert");
+		return bunkeTil.erTom();
 	}
 
 	/**
@@ -145,10 +165,7 @@ public class Spill {
 	 * @return true om fra-bunken er tom, false ellers.
 	 */
 	public boolean bunkefraTom() {
-
-		// TODO
-
-		throw new RuntimeException("Metode bunkefraTom ikke implementert");
+		return bunkeFra.erTom();
 	}
 
 	/**
@@ -157,10 +174,7 @@ public class Spill {
 	 * @return antall kort nord har på handen.
 	 */
 	public int antallNord() {
-
-		// TODO
-
-		throw new RuntimeException("Metode antallNord ikke implementert");
+		return nord.getAntallKort();
 	}
 
 	/**
@@ -169,10 +183,7 @@ public class Spill {
 	 * @return antall kort i fra-bunken.
 	 */
 	public int antallBunkeFra() {
-
-		// TODO
-
-		throw new RuntimeException("Metode antallBunkeFra ikke implementert");
+		return bunkeFra.getAntalKort();
 	}
 
 	/**
@@ -181,10 +192,7 @@ public class Spill {
 	 * @return antall kort i til-bunken.
 	 */
 	public int antallBunkeTil() {
-
-		// TODO
-
-		throw new RuntimeException("Metode antallBunkeTil ikke implementert");
+		return bunkeTil.getAntalKort();
 	}
 
 	/**
@@ -194,10 +202,7 @@ public class Spill {
 	 * @return øverste kortet i til-bunken.
 	 */
 	public Kort seOverste() {
-
-		// TODO
-
-		throw new RuntimeException("Metode seOverste ikke implementert");
+		return bunkeTil.seSiste();
 	}
 
 	/**
@@ -206,10 +211,11 @@ public class Spill {
 	 * @return syds hand som en ArrayList av Kort.
 	 */
 	public ArrayList<Kort> getSydHand() {
+	
+		ArrayList<Kort> syd = new ArrayList<Kort>();
+		syd.addAll(getSydHand());
 
-		// TODO
-
-		throw new RuntimeException("Metode getSydHand ikke implementert");
+		return syd;
 	}
 
 	/**
@@ -222,7 +228,7 @@ public class Spill {
 	 * @return handlingen som skal utføres av spillet.
 	 */
 	public Handling nesteHandling(ISpiller spiller) {
-
+		
 		// TODO
 		// Hint: bruk nesteHandling metoden på en spiller
 

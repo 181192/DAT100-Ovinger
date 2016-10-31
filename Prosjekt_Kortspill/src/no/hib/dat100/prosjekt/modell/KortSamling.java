@@ -57,7 +57,6 @@ public abstract class KortSamling {
 	 * @return antall kort i samlinga.
 	 */
 	public int getAntalKort() {
-
 		int sum = 0;
 		for (int i = 0; i < samling.length; i++) {
 			if (!(samling[i] == null)) {
@@ -76,7 +75,7 @@ public abstract class KortSamling {
 		fjernAlle();
 		Kortfarge[] kr = Kortfarge.values();
 		for (Kortfarge k : kr) {
-			for (int i = 1; i < 14; i++) {
+			for (int i = 1; i <= MAKS_KORT_FARGE; i++) {
 				leggTil(new Kort(k, i));
 			}
 		}
