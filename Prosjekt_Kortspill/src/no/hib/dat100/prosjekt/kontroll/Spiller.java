@@ -42,6 +42,8 @@ public abstract class Spiller implements ISpiller {
 	 *            hvilken spiller det er.
 	 */
 	public Spiller(Spillere spiller) {
+		hand = new Hand();
+		antalltrekk = 0;
 		this.spiller = spiller;
 	}
 
@@ -69,7 +71,7 @@ public abstract class Spiller implements ISpiller {
 
 	@Override
 	public boolean erFerdig() {
-		return hand.getAntalKort() == 0;
+		return hand.erTom();
 	}
 
 	@Override

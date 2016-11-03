@@ -12,7 +12,7 @@ import java.util.Random;
  */
 public abstract class KortSamling {
 
-	public static final int MAKS_KORT_FARGE = 3;
+	public static final int MAKS_KORT_FARGE = 13;
 	private final int MAKS_KORT = 4 * MAKS_KORT_FARGE;
 
 	// tabell for representasjon av samling av kort
@@ -35,7 +35,19 @@ public abstract class KortSamling {
 	 * @return true om samlinga er tom, false ellers.
 	 */
 	public boolean erTom() {
-		return forsteledig == 0;
+		// return forsteledig == 0;
+//		boolean tilstand = false;
+//		for (Kort k : samling) {
+//			if (!(k == null)) {
+//				tilstand = true;
+//			}
+//		}
+//		return tilstand;
+		if (forsteledig == 0) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 	/**
@@ -57,13 +69,14 @@ public abstract class KortSamling {
 	 * @return antall kort i samlinga.
 	 */
 	public int getAntalKort() {
-		int sum = 0;
-		for (int i = 0; i < samling.length; i++) {
-			if (!(samling[i] == null)) {
-				sum++;
-			}
-		} // for
-		return sum;
+//		int sum = 0;
+//		for (int i = 0; i < samling.length; i++) {
+//			if (!(samling[i] == null)) {
+//				sum++;
+//			}
+//		} // for
+//		return sum;
+		return forsteledig;
 	} // get
 
 	/**
@@ -85,9 +98,8 @@ public abstract class KortSamling {
 	 * Fjerner alle korta fra samlinga slik at den blir tom.
 	 */
 	public void fjernAlle() {
-		for (int i = forsteledig; i < 0; i++) {
+		for (int i = 0; i < samling.length; i++) {
 			samling[i] = null;
-			forsteledig++;
 		}
 		forsteledig = 0;
 	}
@@ -119,14 +131,24 @@ public abstract class KortSamling {
 	 *         null.
 	 */
 	public Kort taSiste() {
+//		 if (erTom()) {
+//		 return null;
+//		 } else {
+//		 Kort ta = samling[forsteledig - 1];
+//		 samling[forsteledig - 1] = null;
+//		 forsteledig--;
+//		 return ta;
+//		 }
 		if (erTom()) {
 			return null;
 		} else {
-			Kort ta = samling[forsteledig - 1];
-			samling[forsteledig - 1] = null;
-			forsteledig--;
-			return ta;
+			Kort a = samling[forsteledig-1];
+			fjern(a);
+			return a;
 		}
+		
+		
+		
 	}
 
 	/**
@@ -137,12 +159,10 @@ public abstract class KortSamling {
 	 * @return true om kortet finst i samlinga, false ellers.
 	 */
 	public boolean har(Kort kort) {
-
+		ArrayList<Kort> list = toArrayList();
 		boolean har = false;
-		for (int i = 0; i < forsteledig && !har; i++) {
-			if (samling[i].equals(kort)) {
-				har = true;
-			}
+		if (list.contains(kort)) {
+			har = true;
 		}
 		return har;
 	}
@@ -159,14 +179,22 @@ public abstract class KortSamling {
 		// Hint: finn forst ut hvor kortet er i samlingen hvis det finnes
 
 		// Hint: fjern kortet - men husk kortet kan sitte på en plass i midten
-		Kort slett = null;
-		for (int i = 0; i < forsteledig; i++) {
-			if (kort.lik(samling[i])) {
-				slett = samling[i];
-				samling[i] = samling[forsteledig - 1];
-				samling[forsteledig - 1] = null;
-				forsteledig--;
-			}
+//		Kort slett = null;
+//		for (int i = 0; i < forsteledig; i++) {
+//			if (kort.lik(samling[i])) {
+//				slett = samling[i];
+//				samling[i] = samling[forsteledig - 1];
+//				samling[forsteledig - 1] = null;
+//				forsteledig--;
+//			}
+//		}
+		ArrayList<Kort> list = toArrayList();
+		if (list.contains(kort)) {
+			list.remove(kort);
+		}
+		fjernAlle();
+		for (int i = 0; i < list.size(); i++) {
+			leggTil(list.get(i));
 		}
 	}
 
@@ -178,10 +206,9 @@ public abstract class KortSamling {
 		// index
 		Random random = new Random();
 
-		for (int i = forsteledig + 1; i < 0; i--) {
-			int p = random.nextInt(MAKS_KORT);
+		for (int i = forsteledig - 1; i > 0; i--) {
 			Kort k = samling[i];
-			
+			int p = random.nextInt(MAKS_KORT);			
 			samling[i] = samling[p];
 			samling[p] = k;
 		}
@@ -195,10 +222,9 @@ public abstract class KortSamling {
 	 */
 	public ArrayList<Kort> toArrayList() {
 		ArrayList<Kort> list = new ArrayList<Kort>();
-		if (!erTom()) {
-			for (int i = 0; i < forsteledig; i++) {
-				list.add(samling[i]);
-			}
+		for (Kort k : samling) {
+			if (!(k == null))
+				list.add(k);
 		}
 		return list;
 		// Hint: legg hvert kort fra samling over i arraylisten list
