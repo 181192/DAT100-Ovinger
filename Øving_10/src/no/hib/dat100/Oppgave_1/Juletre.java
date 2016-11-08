@@ -1,6 +1,6 @@
 package no.hib.dat100.Oppgave_1;
 
-public class Juletre implements Tegnbar {
+public class Juletre implements ITegnbar {
 
 	/**
 	 * @author Kristoffer-Andre Kalliainen
@@ -9,44 +9,29 @@ public class Juletre implements Tegnbar {
 	 */
 
 	/**
-	 * Printer ut stjerner.
-	 * 
-	 * @param b
-	 *            Bredde
-	 * @param h
-	 *            Høyde
-	 * @param t
-	 *            Linjeskift
-	 */
-
-	public void skrivStjerne(int b, int h, boolean t) {
-//		String s = "*";
-//		for (int i = 0; i < h; i++) {
-//			System.out.print(s);
-//			for (int j = 0; j < b; j++) {
-//				System.out.print(s);
-//			}
-//			if (t) {
-//				System.out.println();
-//			}
-//		}
-		int n = 10;
-		for (int i = 1; i <= n; i++) {
-			for (int j = 1; j <= i; j++) {
-				System.out.print("*");
-			}
-			System.out.println();
-		}
-	}
-
-	/**
 	 * Tegner opp juletre
 	 */
 
 	@Override
-	public String tegnOpp() {
-		return null;
-
+	public void tegnOpp() {
+		int i;
+		int j;
+		int k;
+		int hoyde = 5;
+		for (i = 1; i <= hoyde; i++) {
+			for (j = hoyde - 1; j >= i; j--) {
+				System.out.print("  ");
+			}
+			for (k = 1; k <= (2 * i - 1); k++) {
+				System.out.print("* ");
+			}
+			System.out.println();
+		}
+		for (int m = 0; m < 2; m++) {
+			for (int n = 0; n <= (2 * hoyde - 4); n++) {
+				System.out.print(" ");
+			}
+			System.out.println("* *");
+		}
 	}
-
 }

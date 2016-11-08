@@ -3,19 +3,15 @@ package no.hib.dat100.Oppgave_1;
 public class test {
 
 	public static void Juletre() {
-		String mellomrom = " ";
-		String tegn = "*";
-		int n = 10;
-		String space = " ";
-			
-		for (int i = 1; i <= n; i++) {
-			
-			for (int j = 1; j <= i; j--) {
-				;
-				System.out.print(tegn + mellomrom);
+		int i, j, k;
+		for (i = 1; i <= 5; i++) {
+			for (j = 4; j >= i; j--) {
+				System.out.print(" ");
 			}
-			
-			System.out.println();
+			for (k = 1; k <= (2 * i - 1); k++) {
+				System.out.print("*");
+			}
+			System.out.println("");
 		}
 	}
 
