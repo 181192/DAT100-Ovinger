@@ -1,6 +1,6 @@
 package no.hib.dat100.Oppgave_3;
 
-public class Akronym {
+class Akronym {
 	int antall;
 	String akronym;
 	String[] tolkninger = new String[10];
@@ -26,5 +26,4 @@ public class Akronym {
 			System.out.println("   " + tolkninger[i]);
 		}
 	}
-
-}
+} // slutt på klassen Akronym

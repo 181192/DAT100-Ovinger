@@ -1,10 +1,10 @@
 package no.hib.dat100.Oppgave_3;
 
-import java.util.*;
+import java.util.HashMap;
 
 import easyIO.In;
 
-public class AkronymMain {
+class AkronymMain {
 	static HashMap<String, Akronym> akronymer;
 
 	public static void main(String[] args) {
@@ -26,7 +26,7 @@ public class AkronymMain {
 
 			// leser akronymet og tolkningen
 			String akro = fil.inWord();
-			String tolkning = fil.inLine().trim();
+			String tolkning = fil.readLine().trim();
 
 			// sjekker om akronymet er registrert tidligere
 			if (akronymer.containsKey(akro)) {
@@ -62,4 +62,5 @@ public class AkronymMain {
 			}
 		} while (!svar.equals("-"));
 	}
-}
+
+}// slutt på klassen AkronymMain
