@@ -46,7 +46,7 @@ public class PersonKlient {
 		
 
 		Out index = new Out("index.html", false);
-		index.out("<html><ul>");
+		index.out("<html><h1>Personregister</h1><ul>");
 		for (int i = 0; i < p.length; i++) {
 			index.out("<li><a href=" + p[i].getEtternamn() + ".html>"+ p[i].getEtternamn() + "</a></li>");
 		}

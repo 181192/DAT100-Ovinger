@@ -56,6 +56,9 @@ public class Lærar extends Person {
 
 	}
 
+	/**
+	 * Returnerer html-kode med info om lærer
+	 */
 	public String tilHTML() {
 		return "<html><ul><li>" + super.getEtternamn() + " " + super.getFornamn() + "</li><li>" + super.getKjønn() + " "
 				+ super.getFødselsår() + "</li><li>" + månadsløn + " " + kontornummer + "</li></ul></html>";

@@ -93,7 +93,11 @@ public class Person {
 		return "\nDen eldste personen er " + getFornamn() + " " + getEtternamn() + " på "
 				+ (2016 - getFødselsår() + " år.");
 	}
-
+	
+	/**
+	 * Streng av html-kode
+	 * @return returnerer ut data i html-kode
+	 */
 	public String tilHTML() {
 		return "<html><ul><li>" + etternamn + " " + fornamn + "</li><li>" + kjønn + " " + fødselsår
 				+ "</li></ul></html>";

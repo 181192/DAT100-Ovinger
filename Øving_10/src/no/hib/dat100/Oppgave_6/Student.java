@@ -55,7 +55,10 @@ public class Student extends Person {
 	public String skrivData() {
 		return super.skrivData() + "\t Studentnummer: " + studentnummer + "\t Klasse: " + klasse;
 	}
-
+	
+	/**
+	 * Returnerer html-kode med info om student
+	 */
 	public String tilHTML() {
 		return "<html><ul><li>" + super.getEtternamn() + " " + super.getFornamn() + "</li><li>" + super.getKjønn() + " "
 				+ super.getFødselsår() + "</li><li>" + studentnummer + " " + klasse + "</li></ul></html>";
