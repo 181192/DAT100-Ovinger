@@ -9,7 +9,8 @@ public class PersonKlient {
 				new Student("Olsen", "Per", 1993, Kjønn.MANN, 123123, "H16DATA"),
 				new Student("Olloto", "Oda", 1947, Kjønn.KVINNE, 345663, "H16DATA"),
 				new Lærar("Persen", "Ole", 1996, Kjønn.MANN, 25000, 403),
-				new Lærar("Pettersen", "Helga", 1880, Kjønn.KVINNE, 20000, 123) };
+				new Lærar("Pettersen", "Helga", 1880, Kjønn.KVINNE, 20000, 123),
+				new Lærar("Wiig", "Helga", 1880, Kjønn.KVINNE, 20000, 123) };
 
 		// Skriver ut person-tabell
 		for (int i = 0; i < p.length; i++) {
@@ -42,14 +43,13 @@ public class PersonKlient {
 			Out html = new Out(p[i].getEtternamn() + ".html", false);
 			html.out(p[i].tilHTML());
 			html.close();
-		}
-		
+		} // for
 
 		Out index = new Out("index.html", false);
-		index.out("<html><h1>Personregister</h1><ul>");
+		index.out("<!DOCTYPE html><html><h1>Personregister</h1><ul>");
 		for (int i = 0; i < p.length; i++) {
-			index.out("<li><a href=" + p[i].getEtternamn() + ".html>"+ p[i].getEtternamn() + "</a></li>");
-		}
+			index.out("<li><a href=" + p[i].getEtternamn() + ".html>" + p[i].getEtternamn() + "</a></li>");
+		} // for
 		index.out("</ul></html>");
 		index.close();
 
