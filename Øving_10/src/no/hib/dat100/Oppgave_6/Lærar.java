@@ -10,6 +10,21 @@ public class Lærar extends Person {
 		kontornummer = 0;
 	}
 
+	/**
+	 * 
+	 * @param etternamn
+	 *            Etternamn på lærer
+	 * @param fornamn
+	 *            Fornamn på lærer
+	 * @param fødselsår
+	 *            Fødselsår til lærer
+	 * @param kjønn
+	 *            Kjønn på lærer
+	 * @param månadsløn
+	 *            Månadsløn til lærer, etc 20000
+	 * @param kontornummer
+	 *            Kontornummer til lærer, etc 503
+	 */
 	public Lærar(String etternamn, String fornamn, int fødselsår, Kjønn kjønn, int månadsløn, int kontornummer) {
 		super(etternamn, fornamn, fødselsår, kjønn);
 		this.månadsløn = månadsløn;
@@ -32,11 +47,18 @@ public class Lærar extends Person {
 		this.kontornummer = kontornummer;
 	}
 
+	/**
+	 * Skriver ut data om en lærar: Etternamn, fornamn, fødselsår, kjønn,
+	 * månadsløn og kontornummer.
+	 */
 	public String skrivData() {
-		return "Etternamn: " + super.getEtternamn() + "\t Fornamn: " + super.getFornamn() + "\t Fødselsår: "
-				+ super.getFødselsår() + "\t Kjønn: " + super.getKjønn() + "\t Månadsløn: " + månadsløn + "\t Kontornummer: "
-				+ kontornummer;
+		return super.skrivData() + "\t Månadsløn: " + månadsløn + "\t Kontornummer: " + kontornummer;
 
+	}
+
+	public String tilHTML() {
+		return "<html><ul><li>" + super.getEtternamn() + " " + super.getFornamn() + "</li><li>" + super.getKjønn() + " "
+				+ super.getFødselsår() + "</li><li>" + månadsløn + " " + kontornummer + "</li></ul></html>";
 	}
 
 }

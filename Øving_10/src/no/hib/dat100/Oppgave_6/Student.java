@@ -5,10 +5,27 @@ public class Student extends Person {
 	private String klasse;
 
 	public Student() {
+		super("", "", 0, null);
 		studentnummer = 0;
 		klasse = "";
 	}
 
+	/**
+	 * Konstruktør for student.
+	 * 
+	 * @param etternamn
+	 *            Etternamn på student
+	 * @param fornamn
+	 *            Fornamn på student
+	 * @param fødselsår
+	 *            Fødselsår på student
+	 * @param kjønn
+	 *            Kjønn på student
+	 * @param studentnummer
+	 *            Studentnummer
+	 * @param klasse
+	 *            Klasse
+	 */
 	public Student(String etternamn, String fornamn, int fødselsår, Kjønn kjønn, int studentnummer, String klasse) {
 		super(etternamn, fornamn, fødselsår, kjønn);
 		this.studentnummer = studentnummer;
@@ -31,10 +48,17 @@ public class Student extends Person {
 		this.klasse = klasse;
 	}
 
+	/**
+	 * Skriver ut data om en student: Etternamn, fornamn, fødselsår, kjønn,
+	 * studentnummer og klasse.
+	 */
 	public String skrivData() {
-		return "Etternamn: " + super.getEtternamn() + "\t Fornamn: " + super.getFornamn() + "\t Fødselsår: "
-				+ super.getFødselsår() + "\t Kjønn: " + super.getKjønn() + "\t Studentnummer: " + studentnummer
-				+ "\t Klasse: " + klasse;
+		return super.skrivData() + "\t Studentnummer: " + studentnummer + "\t Klasse: " + klasse;
+	}
+
+	public String tilHTML() {
+		return "<html><ul><li>" + super.getEtternamn() + " " + super.getFornamn() + "</li><li>" + super.getKjønn() + " "
+				+ super.getFødselsår() + "</li><li>" + studentnummer + " " + klasse + "</li></ul></html>";
 	}
 
 }
