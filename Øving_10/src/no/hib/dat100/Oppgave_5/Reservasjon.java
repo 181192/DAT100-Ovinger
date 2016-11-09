@@ -1,11 +1,15 @@
 package no.hib.dat100.Oppgave_5;
 
+import java.util.HashMap;
+
 public class Reservasjon {
 	private int romnummer;
 	private int startTid;
 	private int sluttTid;
 	private int reservasjonsnummer;
 	private Person person;
+
+	HashMap<Rom, Person> register = new HashMap<Rom, Person>();
 
 	public Reservasjon(int romnr, int start, int slutt, int resnr, Person p) {
 		this.romnummer = romnr;
@@ -54,7 +58,25 @@ public class Reservasjon {
 	public void setP(Person p) {
 		this.person = p;
 	}
-	
-	
+
+	public void opprettMidlertidig(int romnr, int start, int slutt, int resnr, int sluttTid, Person p) {
+
+	}
+
+	public void opprettPermanent(int romnr, int start, int slutt, int resnr, BordogStoler info, Person p) {
+		
+	}
+
+	public void endreReservasjon(Reservasjon r) {
+
+	}
+
+	public void finnReservasjon(Person p) {
+		register.get(p);
+	}
+
+	public void visReservasjon(Rom r) {
+		register.get(r);
+	}
 
 } // klasse
