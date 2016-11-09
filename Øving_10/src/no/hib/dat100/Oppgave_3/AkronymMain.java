@@ -25,8 +25,8 @@ class AkronymMain {
 		while (!fil.endOfFile()) {
 
 			// leser akronymet og tolkningen
-			String akro = fil.inWord();
-			String tolkning = fil.readLine().trim();
+			String akro = fil.next();
+			String tolkning = fil.inLine().trim();
 
 			// sjekker om akronymet er registrert tidligere
 			if (akronymer.containsKey(akro)) {

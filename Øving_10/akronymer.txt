@@ -18,8 +18,8 @@ ABS       Absolute
 ABT       Abort
 ABTS      ASCII Block Terminal Services
 AC        Autocheck  
-AC		  Automatic Computer  
-AC 		  Alternating Current
+AC Automatic Computer  
+AC Alternating Current
 ACAP      Application Configuration Access Protocol
 ACC       Accumulator
 ACCMAIL   Accessing the Internet Via Email
@@ -45,7 +45,7 @@ ACPI      Advanced Configuration and Power Interface
 ACR       Allowed Cell Rate
 ACROSS    Automated Cargo Release and Operations Service System
 ACS       Access  
-ACS 	  Access Control Set 
+ACS Access Control Set 
 ACS       Acccess Control System 
 ACS       Advanced Computer System [IBM] 
 ACS       Anti Curl System 
@@ -116,7 +116,7 @@ AGRAS     Antiglare-Antireflective-Antistatic
 AGU       Address-Generation Unit
 AHS       Automated Highway Systems
 AI        Analog Input  
-AI 		  Artificial Intelligence
+AI Artificial Intelligence
 AIA       Applications Integration Architecture [DEC]
 AIC       AIXwindows Interface Composer [IBM]
 AIF       Audio Interchange Format
@@ -163,7 +163,7 @@ AOE       Application Operating Environment [AT&amp;T]
 AOL       America Online
 AOS       Add Or Subtract
 AP        Adjunct Processor  
-AP 		  Application Processor
+AP Application Processor
 A/P       Accounts Payable
 APA       Adaptive Packet Assembly 
 APA       All Points Addressable 
@@ -232,7 +232,7 @@ ASLM      Apple Shared Library Manager [Macintosh]
 .ASM      Assembler Source Language (file name extension)
 ASMP      Asymmetric Multprocessing
 ASN       Abstract Syntax Notation  
-ASN 	  Autonomous System Number
+ASN Autonomous System Number
 ASO       Automated Systems Operations
 ASP       Active Server Page [Microsoft] 
 ASP       Authorized Service Provider 
@@ -241,14 +241,14 @@ ASP       Association of Shareware Professionals
 ASPI      Advanced SCSI Programming Interface [Adaptec]
 ASPS      Advanced Signal Processing System
 ASR       Address Space Register  
-ASR 	  Automatic Send-Receive 
+ASR Automatic Send-Receive 
 ASR       Automatic Speech Recognition
 AST       AST Research, Inc. (named from first initials of the founders: Albert Wong, Safi Qureshey, Thomas Yuen)
 AS/U      Advanced Server for Unix
 ASYNC     Asynchronous
 AS/400    Application System/400 [IBM]
 AT        Advanced Technology  
-AT		  Attention
+AT Attention
 ATAPI     Advanced Technology Attachment Packet Interface
 ATDP      Attention Dial Pulse
 ATDT      Attention Dial Tone
@@ -291,7 +291,7 @@ AWK       (Unix language named after its authors:Al Aho, Peter Weinberger and Br
 AWS       Advanced Workstations and Systems (group) [IBM]
 AWT       Abstract Window Toolkit [Java]
 AX        Architecture Extended  
-AX 		  Automatic Transmission
+AX Automatic Transmission
 BACP      Bandwidth Allocation Control Protocol
 BAK       Binary Adaptation Kit [Microsoft]
 .BAK      Backup (file name extension)
@@ -353,7 +353,7 @@ BIFET     Bipolar Field Effect Transistor
 BIFF      Binary Interchange File Format
 BIM       Beginning of Information Marker
 .BIN      Binary (file name extension)
-BINAC     Binary Automatic Computer
+BINAC   * Binary Automatic Computer
 BIND      Berkeley Internet Name Domain
 BINHEX    Binary Hexadecimal
 BIOS      Basic Input/Output System
@@ -385,7 +385,7 @@ BLOS      Branch if Lower Or Same
 BMI       Branch if Minus
 BMIC      BusMaster Interface Controller [Intel]
 BMP       Basic Mapping Support  
-BMP 	  Batch Message Processing Program
+BMP Batch Message Processing Program
 .BMP      Bitmap (file name extension) [Paintbrush Format]
 BNC       Bayonet Neill-Concelman (connector used with coaxial cable invented by Mr. Neill-Concelman)
 BNE       Branch if Not Equal
@@ -463,7 +463,7 @@ CAG       Column Address Generator
 CAI       Computer Aided Instruction
 CAIRN     Collaborative Advanced Interagency Research Network
 CAL       Calendar  
-CAL 	  Client Access License 
+CAL Client Access License 
 CAL       Computer Aided Learning
 CALS      Computer-Aided Acquisition in Logistic Support
 CAM       Common Access Method  
@@ -598,7 +598,7 @@ CG        Control Gate
 CGA       Color Graphics Adapter
 CGE       Common Graphics Environment
 CGI       Computer Generated Images  
-CGI 	  Computer Graphics Interface
+CGI Computer Graphics Interface
 CGI-BIN   Common Gateway Interface - Binary
 .CGM      Computer Graphics Metafile (file name extension) 
 CGS       Continuous-Grain Silicon
@@ -660,8 +660,8 @@ CLC       Clear Carry Flag
 CLD       Clear Direction Flag
 CLI       Call-Level Interface  
 CLI       Clear Interrupt Flag 
-CLI       Client Library Interface  
-CLI 	  Command Line Interface
+CLI          Client Library Interface  
+CLI Command Line Interface
 CLIB      C Library
 CLID      Calling Line Identification
 CLIST     Command List
@@ -669,7 +669,7 @@ CLK       Clock
 CLNP      Connectionless Network Protocol
 CLOS      Common Lisp Object System
 CLP       Cell Loss Priority  
-CLP 	  Constraint Logic Programming
+CLP Constraint Logic Programming
 .CLP      Clipboard (file name extension) [Windows]
 CLS       Clear Screen
 CLTP      Connectionless Transport Protocol
@@ -679,11 +679,11 @@ CLUI      Command Line User Interface
 CLUT      Color Look-Up Table
 CLV       Constant Linear Velocity
 CM        Centimeter  
-CM 		  Control Mark  
-CM 		  Corrective Maintenance
+CM Control Mark  
+CM Corrective Maintenance
 CMA       Concert Multi-thread Architecture
 CMC       Common Mail Calls  
-CMC 	  Common Messaging Calls 
+CMC Common Messaging Calls 
 CMC       Communication Management Configuration 
 CMC       Complement Carry Flag 
 CMC       Computer-Mediated Communication [Internet]
@@ -696,7 +696,7 @@ CMIP      Common Management Information Protocol
 CMIS      Common Management Information Services/System
 CML       Conceptual Modelling Language 
 CML       Computer Managed Learning  
-CML 	  Current Mode Logic
+CML Current Mode Logic
 CMM       Capability Maturity Model
 CMMS      Computerized Maintenance Management Software
 CMMU      Cache/Memory Management Unit [Motorola]
@@ -705,7 +705,7 @@ CMOV      Conditional Move
 CMP       Compare
 CMPS      Compare word String
 CMS       Code Management System  
-CMS 	  Compiler Monitor System 
+CMS Compiler Monitor System 
 CMS       Conversation Monitor System
 CMVC      Configuration Management Version Control [IBM]
 CMW       Compartmented Mode Workstation
@@ -727,23 +727,23 @@ CNV       Conventional (pertaining to Memory)
 CNVT      Convert
 CNX       Certified Network Expert
 CO        Central Office  
-CO 		  Command Output  
-CO 		  Convert Out
+CO Command Output  
+CO Convert Out
 COAST     Card On A Stick (module)
 COAX      Coaxial Cable
 COB       Chip-On-Board
 .COB      COBOL source code (file name extension)
 COBOL     Common Business-oriented Language (See HLL)
 .COD      Code List (file name extension)
-CODASYL   Conference on Data System Languages (Group that designed COBOL)
+CODASYL  Conference on Data System Languages (Group that designed COBOL)
 CODE      Client-Server Open Development Environment
 CODEC     Coder/Decoder  
-CODEC 	  Compression/Decompression
+CODEC Compression/Decompression
 COEM      Commercial Original Equipment Manufacturer
 COFF      Common Object File Format [Unix]
 COGO      Coordinate Geometry (Programming Language)
 COL       Collision  
-COL		  Computer Oriented Language
+COL Computer Oriented Language
 COLD      Computer Output to Laser Disk
 COLL      Collision
 COM       Component Object Model [Microsoft] 
@@ -785,7 +785,7 @@ CPE       Customer Provided Equipment
 .CPE      Cover Page (file name extension)
 CPG       Clock Pulse Generator
 CPI       Characters Per Inch  
-CPI 	  Clock Per Instruction 
+CPI Clock Per Instruction 
 CPI       Common Programming Interface [IBM]
 .CPI      Code Page Information (file name extension) [MS-DOS]
 CPI-C     Common Programming Interface for Communications [IBM]
@@ -796,7 +796,7 @@ CPLD      Complex Programmable Logic Device
 CPM       Critical Path Method
 CP/M      Control Program for Microcomputers [Digital Research]
 CPS       Characters Per Second  
-CPS 	  Cycles Per Second
+CPS Cycles Per Second
 CPT       Command Pass Through
 CPU       Central Processing Unit
 CPW       Commercial Processing Workload [IBM]
@@ -809,7 +809,7 @@ CRC       Cyclic Redundancy Check
 CREN      Computer Research Education Network 
 CREN      Corporation for Research and Education Networking
 CRF       Cable Retransmission Facility  
-CRF 	  Cross Reference File
+CRF Cross Reference File
 CRI       Color Reproduction Indices
 CR/LF     Carriage Return/Line Feed
 CROM      Control Read Only Memory
@@ -817,8 +817,8 @@ CRT       Cathode Ray Tube
 CRTC      CRT Controller
 CRUD      Create, Retrieve, Update, Delete
 CS        Chip Select  
-CS 		  Clear to Send  
-CS 		  Code Segment
+CS Clear to Send  
+CS Code Segment
 C/S       Client/Server
 CSA       Calendaring and Scheduling API [IBM]
 CSAR      Channel System Address Register
@@ -832,17 +832,16 @@ CSFI      Communication Subsystem For Interconnection
 CSG       Constructive Solid Geometry 
 CSG       Consulting Services Group [Lotus]
 CSI       Command Sequence Introducer  
-CSI 	  CompuServe Incorporated
+CSI CompuServe Incorporated
 CSID      Call Subscriber ID
 CSL       Computer Sensitive Language
 CSLIP     Compressed Serial Line Interface Protocol [Internet]
 CSM       Code Set Map (file)  
-CSM 	  Communications Services Manager
+CSM Communications Services Manager
 CSMA/CA   Carrier Sense Multiple Access/with Collision Avoidance
 CSMA/CD   Carrier Sense Multiple Access/with Collision Detection
 FN 		  Forente nasjoner
-EU 		  Europaunionen
-SAS		  Scandinavian Airlines System
+EU Europaunionen
+SAS Scandinavian Airlines System
 HTTP 	  Hypertext transfer protocol
 AA 		  Anonyme alkoholikere
-

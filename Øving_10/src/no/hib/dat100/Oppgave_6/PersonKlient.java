@@ -7,7 +7,7 @@ public class PersonKlient {
 				new Student("Olsen", "Per", 1993, Kjønn.MANN, 123123, "H16DATA"),
 				new Student("Olloto", "Oda", 1947, Kjønn.KVINNE, 345663, "H16DATA"),
 				new Lærar("Persen", "Ole", 1996, Kjønn.MANN, 25000, 403),
-				new Lærar("Pettersen", "Helga", 1980, Kjønn.KVINNE, 20000, 123) };
+				new Lærar("Pettersen", "Helga", 1880, Kjønn.KVINNE, 20000, 123) };
 		
 		// Skriver ut person-tabell
 		for (int i = 0; i < p.length; i++) {
@@ -15,16 +15,14 @@ public class PersonKlient {
 		} // for
 
 		// Skriver ut eldste person
-		int eldste = p[0].getFødselsår();
-		int teller = 0;
+		int eldste = 0;
 		for (int i = 0; i < p.length; i++) {
-			if (p[i].getFødselsår() > eldste) {
-				eldste = p[i].getFødselsår();
+			if (p[i].getFødselsår() < p[eldste].getFødselsår()) {
+				eldste = i;
 			} // if
-			teller++;
 		} // for
-		System.out.println("\nDen eldste personen er " + p[teller - 1].getFornamn() + " " + p[teller - 1].getEtternamn()
-				+ " på " + (2016 - p[teller - 1].getFødselsår() + " år."));
+		System.out.println("\nDen eldste personen er " + p[eldste].getFornamn() + " " + p[eldste].getEtternamn()
+				+ " på " + (2016 - p[eldste].getFødselsår() + " år."));
 		
 		// Finner antall menn og kvinner
 		int antallKvinner = 0;

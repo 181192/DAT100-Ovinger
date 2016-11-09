@@ -5,6 +5,7 @@ public class Lærar extends Person {
 	private int kontornummer;
 
 	public Lærar() {
+		super("", "", 0, null);
 		månadsløn = 0;
 		kontornummer = 0;
 	}
