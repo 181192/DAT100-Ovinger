@@ -25,5 +25,9 @@ public class Person {
 		this.navn = navn;
 	}
 	
+	public String skrivData() {
+		return "Navn: " + getNavn() + ", Epost: " + getEpost();
+	}
+	
 
 } // klasse

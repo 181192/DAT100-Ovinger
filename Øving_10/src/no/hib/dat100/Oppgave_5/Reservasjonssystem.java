@@ -1,18 +1,70 @@
 package no.hib.dat100.Oppgave_5;
 
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
+
 public class Reservasjonssystem {
-	public static void main(String[] args) {
-		Person[] p	= new Person[] {
-			new Person("epost", "Per"),
-			new Person("epost1", "Ole")
-		};
+	
+	
+
+	HashMap<Integer, Person> register = new HashMap<Integer, Person>();
+
+	ArrayList<Reservasjon> resList = new ArrayList<Reservasjon>();
+
+	ArrayList<Rom> rom = new ArrayList<Rom>();
+
+	public void opprettMidlertidig(int romnr, Date start, Date slutt, int resnr, Person p) {
+		Reservasjon reservasjon = new MidlertidigReservasjon(romnr, start, slutt, resnr, p);
+		resList.add(reservasjon);
+		register.put(romnr, p);
+	}
+
+	public void opprettPermanent(int romnr, Date start, Date slutt, int resnr, BordogStoler info, Person p) {
+		Reservasjon reservasjon = new PermanentReservasjon(romnr, start, slutt, resnr, info, p);
+		resList.add(reservasjon);
+		register.put(romnr, p);
+	}
+	
+	public void slettReservasjon(MidlertidigReservasjon m) {
+		resList.remove(m);
+		register.remove(m.getRomnummer());
+	}
+	
+	public void skjekkTid(MidlertidigReservasjon m) {
+		Date tid = new Date();
+		tid.setHours(0);
 		
-		Reservasjon[] res = new Reservasjon[] {
-			new Reservasjon(202, 2, 3, 1001, p[1])
-		};
+		for (Reservasjon r : resList) {
+			if (r.getSluttTid() == tid) {
+				
+			}
+		}
+	}
+
+	public void endreReservasjon(MidlertidigReservasjon m) {
 		
-		res[0].opprettMidlertidig(102, 1, 2, 1000, 2, p[0]);
 		
-		
-	} // main
+	}
+
+	public Reservasjon finnReservasjon(Person p) {
+		Reservasjon res = null;
+		Integer nokkel = null;
+		for (Integer i : register.keySet()) {
+			if (register.containsValue(p)) {
+				nokkel = i;
+			}
+		}
+		for (Reservasjon r : resList) {
+			if (r.getRomnummer() == nokkel) {
+				res = r;
+			}
+		}
+		return res;
+	}
+
+	public void visReservasjon(Rom r) {
+		register.get(r);
+	}
+
 } // klasse

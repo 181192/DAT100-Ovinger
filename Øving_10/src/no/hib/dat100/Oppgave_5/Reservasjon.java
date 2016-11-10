@@ -1,20 +1,18 @@
 package no.hib.dat100.Oppgave_5;
 
-import java.util.HashMap;
+import java.util.Date;
 
 public class Reservasjon {
 	private int romnummer;
-	private int startTid;
-	private int sluttTid;
+	private Date startTid;
+	private Date sluttTid;
 	private int reservasjonsnummer;
 	private Person person;
 
-	HashMap<Rom, Person> register = new HashMap<Rom, Person>();
-
-	public Reservasjon(int romnr, int start, int slutt, int resnr, Person p) {
+	public Reservasjon(int romnr, Date start, Date slutt, int resnr, Person p) {
 		this.romnummer = romnr;
-		this.startTid = start;
-		this.sluttTid = slutt;
+		startTid = start;
+		sluttTid = slutt;
 		this.reservasjonsnummer = resnr;
 		this.person = p;
 	}
@@ -27,20 +25,28 @@ public class Reservasjon {
 		this.romnummer = romnummer;
 	}
 
-	public int getStartTid() {
+	public Date getStartTid() {
 		return startTid;
 	}
 
-	public void setStartTid(int startTid) {
+	public void setStartTid(Date startTid) {
 		this.startTid = startTid;
 	}
 
-	public int getSluttTid() {
+	public Date getSluttTid() {
 		return sluttTid;
 	}
 
-	public void setSluttTid(int sluttTid) {
+	public void setSluttTid(Date sluttTid) {
 		this.sluttTid = sluttTid;
+	}
+
+	public Person getPerson() {
+		return person;
+	}
+
+	public void setPerson(Person person) {
+		this.person = person;
 	}
 
 	public int getReservasjonsnummer() {
@@ -57,26 +63,6 @@ public class Reservasjon {
 
 	public void setP(Person p) {
 		this.person = p;
-	}
-
-	public void opprettMidlertidig(int romnr, int start, int slutt, int resnr, int sluttTid, Person p) {
-
-	}
-
-	public void opprettPermanent(int romnr, int start, int slutt, int resnr, BordogStoler info, Person p) {
-		
-	}
-
-	public void endreReservasjon(Reservasjon r) {
-
-	}
-
-	public void finnReservasjon(Person p) {
-		register.get(p);
-	}
-
-	public void visReservasjon(Rom r) {
-		register.get(r);
 	}
 
 } // klasse
