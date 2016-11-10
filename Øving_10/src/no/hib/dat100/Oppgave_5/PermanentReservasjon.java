@@ -17,4 +17,6 @@ public class PermanentReservasjon extends Reservasjon {
 	public void setInfo(BordogStoler info) {
 		this.info = info;
 	}
+	
+	
 } // klasse

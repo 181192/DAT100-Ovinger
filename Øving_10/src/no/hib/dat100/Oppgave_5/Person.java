@@ -29,5 +29,10 @@ public class Person {
 		return "Navn: " + getNavn() + ", Epost: " + getEpost();
 	}
 	
+	public static Person opprettPerson(String epost, String navn) {
+		Person p = new Person(epost, navn);
+		return p;
+	}
+	
 
 } // klasse

@@ -4,15 +4,20 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 
-public class Reservasjonssystem {
-	
-	
+public class Reservasjonssystem {	
 
 	HashMap<Integer, Person> register = new HashMap<Integer, Person>();
 
 	ArrayList<Reservasjon> resList = new ArrayList<Reservasjon>();
 
 	ArrayList<Rom> rom = new ArrayList<Rom>();
+	
+	public static Date settTid(int i) {
+		Date tid = new Date();
+		tid.setTime(i);
+		
+		return tid;
+	}
 
 	public void opprettMidlertidig(int romnr, Date start, Date slutt, int resnr, Person p) {
 		Reservasjon reservasjon = new MidlertidigReservasjon(romnr, start, slutt, resnr, p);
@@ -31,22 +36,21 @@ public class Reservasjonssystem {
 		register.remove(m.getRomnummer());
 	}
 	
-	public void skjekkTid(MidlertidigReservasjon m) {
+	public void skjekkTid(MidlertidigReservasjon m) {	
 		Date tid = new Date();
 		tid.setHours(0);
 		
 		for (Reservasjon r : resList) {
 			if (r.getSluttTid() == tid) {
-				
+				slettReservasjon(m);
 			}
 		}
 	}
 
 	public void endreReservasjon(MidlertidigReservasjon m) {
 		
-		
 	}
-
+	
 	public Reservasjon finnReservasjon(Person p) {
 		Reservasjon res = null;
 		Integer nokkel = null;

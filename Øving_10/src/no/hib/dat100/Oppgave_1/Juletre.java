@@ -33,5 +33,6 @@ public class Juletre implements ITegnbar {
 			}
 			System.out.println("* *");
 		}
+		System.out.println();
 	}
 }
