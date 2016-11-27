@@ -1,4 +1,4 @@
-package no.hib.dat100.V15_5;
+package no.hib.dat100.H15_5;
 
 import static org.junit.Assert.*;
 

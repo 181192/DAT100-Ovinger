@@ -1,4 +1,4 @@
-package no.hib.dat100.V15_3;
+package no.hib.dat100.H15_3;
 
 import static org.junit.Assert.assertFalse;
 

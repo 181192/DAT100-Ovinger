@@ -1,4 +1,4 @@
-package no.hib.dat100.V15_5;
+package no.hib.dat100.H15_5;
 
 public class Graf {
 	// matrisen i eksemplet over

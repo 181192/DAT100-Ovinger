@@ -1,4 +1,4 @@
-package no.hib.dat100.V15_4;
+package no.hib.dat100.H15_4;
 
 public abstract class Kjoretoy {
 	private String regnr;

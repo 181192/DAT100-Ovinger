@@ -1,4 +1,4 @@
-package no.hib.dat100.V15_2;
+package no.hib.dat100.H15_2;
 
 public class Innboks implements IInnboks {
 	private Epost[] eposter;
