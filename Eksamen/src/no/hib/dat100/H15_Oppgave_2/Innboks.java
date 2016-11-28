@@ -8,50 +8,50 @@ public class Innboks implements IInnboks {
 		this.eposter = new Epost[antall];
 	}
 
+	@Override
 	public int maxAntall() {
 		return eposter.length;
 	}
 
+	@Override
 	public int antallLedige() {
-		int antall = 0;
-		for (int i = 0; i < eposter.length; i++) {
-			if (eposter[i] == null) {
-				antall++;
+		int ledig = 0;
+		for (Epost epost : eposter) {
+			if (epost == null) {
+				ledig++;
 			}
 		}
-		return antall;
+		return ledig;
 	}
 
+	@Override
 	public boolean erFull() {
 		int innhold = 0;
-		Epost epost;
-		int i = 0;
-		
-		while (i < eposter.length) {
-			epost = eposter[i];
-			
+		for (Epost epost : eposter) {
 			if (epost != null) {
-				innhold += epost.getInnhold().length();
+				innhold = innhold + epost.getInnhold().length();
 			}
-			i++;
 		}
 		return (innhold > MAXTEGN);
 	}
 
+	@Override
 	public boolean leggTil(Epost epost) {
-		boolean sattInn = false;
+		boolean sattinn = false;
 		int ledige = antallLedige();
-		
+		// også ok ikke å test på erFull (ikke fuldt beskrevet i oppgaven
 		if ((ledige > 0) && (!erFull())) {
 			int i = maxAntall() - ledige;
-			while(i > 0) {
+			// flytt alle eposter en plass mot slutten av tabellen
+			while (i > 0) {
 				eposter[i] = eposter[i - 1];
 				i--;
 			}
+			// innsett den nye epost forrest
 			eposter[0] = epost;
-			sattInn = true;
+			sattinn = true;
 		}
-		return sattInn;
+		return sattinn;
 	}
 
 }
