@@ -2,7 +2,7 @@ package no.hib.dat100.V16_Oppgave_5;
 
 public class Tilgjengelig {
 	boolean[][] tilgjengelig = { { true, true, true, true }, // person 0
-			{ true, false, true, true }, // person 1
+			{ true, true, true, true }, // person 1
 			{ true, true, true, true }, // person 2
 			{ false, true, false, true },
 			{ true, false, true, true },
@@ -26,10 +26,10 @@ public class Tilgjengelig {
 	}
 
 	public boolean kanAlle(int tidspunkt) {
-		boolean kanAlle = false;
+		boolean kanAlle = true;
 		for (int rad = 0; rad < tilgjengelig.length; rad++) {
-			if (tilgjengelig[rad][tidspunkt]) {
-				kanAlle = true;
+			if (!tilgjengelig[rad][tidspunkt]) {
+				kanAlle = false;
 			}
 		}
 		return kanAlle;

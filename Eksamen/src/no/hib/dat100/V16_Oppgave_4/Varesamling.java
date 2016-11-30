@@ -24,7 +24,7 @@ public class Varesamling {
 		while (teller < antall /* && nummer != samling[teller].getVarenummer()*/) {
 			if (nummer == samling[teller].getVarenummer()) {
 				v = samling[teller];
-				v.toString();
+				
 			}
 			teller++;
 		}

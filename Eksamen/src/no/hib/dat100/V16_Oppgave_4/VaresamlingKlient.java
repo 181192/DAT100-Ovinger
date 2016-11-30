@@ -10,20 +10,22 @@ public class VaresamlingKlient {
 		Vare v2 = new Vare("brød", 3232, 20);
 		vs.leggTil(v1);
 		vs.leggTil(v2);
-
+		
+		int varenr = 0;
+		
 		Scanner tast = new Scanner(System.in);
 
 		do {
 			System.out.print("Tast varenummer: ");
-			int varenr = tast.nextInt();
+			varenr = tast.nextInt();
 			System.out.print("Tast antall: ");
 			int antall = tast.nextInt();
 			if (vs.finnVare(varenr) == null) {
 				System.out.println("Ukjent varenummer. ");
 			} else {
-				System.out.println(antall + " " + vs.finnVare(varenr).getNavn() + " " + vs.finnVare(varenr).getPris() * antall);
+				System.out.println(antall + " stk. " + vs.finnVare(varenr).getNavn() + " " + vs.finnVare(varenr).getPris() * antall + " kr");
 			}
-		} while (tast.nextInt() != 0);
+		} while (varenr != 0);
 
 		tast.close();
 

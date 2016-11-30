@@ -1,6 +1,7 @@
 package no.hib.dat100.V16_Oppgave_2;
 
 public class Strekkode {
+
 	public static String land(String kode) {
 		String land = "";
 		if (kode.startsWith("57")) {
@@ -12,42 +13,45 @@ public class Strekkode {
 		} else if (kode.startsWith("70")) {
 			land = "Norge";
 		} else if (kode.startsWith("569")) {
-			land = "Island";
+			land = "Danmark";
 		} else {
-			land = "Annet";
+			land = "Andre";
 		}
 		return land;
 	} // metode
 
 	public static boolean lovligKode(String kode) {
 		boolean tilstand = false;
-		int parSum = 0;
-		int oddeSum = 0;
+		int partall = 0;
+		int oddetall = 0;
 		int kontrollsiffer = Character.digit(kode.charAt(kode.length() - 1), 10);
-
 		for (int i = 0; i < kode.length() - 1; i++) {
 			int tall = Character.digit(kode.charAt(i), 10);
+			
 			if (i % 2 == 0) {
-				parSum = parSum + tall;
-			} else if (i % 2 != 0) {
-				oddeSum = oddeSum + tall;
+				// partall
+				partall += tall;
+			}
+			else if (i % 2 != 0) {
+				// oddetall
+				oddetall += tall;
 			}
 		}
-		int totalSum = (parSum + (oddeSum * 3) + kontrollsiffer);
-
-		if (totalSum % 10 == 0) {
+		int total = partall + (oddetall * 3) + kontrollsiffer;
+		if (total % 10 == 0) {
 			tilstand = true;
 		}
 		return tilstand;
 	} // metode
-
-	public static boolean alleLovlige(String[] koder) {
+	
+	public static boolean alleLovlige (String[] koder) {
 		boolean tilstand = false;
-		for (String k : koder) {
-			if (lovligKode(k)) {
+		for (String tall : koder) {
+			if (lovligKode(tall)) {
 				tilstand = true;
 			}
 		}
 		return tilstand;
-	}
+	} // metode
+
 } // class
