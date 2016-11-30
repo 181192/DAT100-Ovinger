@@ -9,7 +9,7 @@ public class Videoarkiv {
 	}
 
 	public void leggTil(Video v) {
-		if (antall < vTab.length) {
+		if (antall <= vTab.length) {
 			vTab[antall] = v;
 			antall++;
 		}
